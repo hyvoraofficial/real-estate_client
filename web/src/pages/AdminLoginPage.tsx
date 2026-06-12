@@ -66,7 +66,6 @@ export const AdminLoginPage: React.FC = () => {
                 onError={() => {
                   toast.error('Google Login Failed');
                 }}
-                prompt="select_account"
                 theme="filled_black"
                 shape="pill"
                 size="large"
