@@ -4,7 +4,7 @@ import { AdminSidebar } from './AdminSidebar';
 
 export const AdminLayout: React.FC = () => {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/admin/login';
+  const isLoginPage = location.pathname === '/login/admin';
 
   if (isLoginPage) {
     return (
