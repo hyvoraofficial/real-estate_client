@@ -23,9 +23,9 @@ export const Footer: React.FC = () => {
             <div>
               <p className="font-bold text-gray-200 mb-1">Corporate Address:</p>
               <p className="text-sm leading-relaxed text-gray-400">
-                SK Buildings Corporate Office,<br />
-                [Your Address Here],<br />
-                City, State, Pincode
+                SK Building, Pattandur Agrahara,<br />
+                Whitefield Post,<br />
+                Bengaluru 560066
               </p>
             </div>
             
