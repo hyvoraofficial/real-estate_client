@@ -92,8 +92,8 @@ export const AboutPage: React.FC = () => {
           {founders.map((founder, index) => (
             <section key={founder.id || index} className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-center">
               <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-                {founder.image ? (
-                  <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
+                {founder.image_url ? (
+                  <img src={founder.image_url} alt={founder.name} className="w-full h-full object-cover" />
                 ) : (
                   <div className="w-full h-full bg-grey-dark flex items-center justify-center">
                     <Users size={64} className="text-grey-light" />
@@ -104,19 +104,11 @@ export const AboutPage: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white font-serif">{founder.name}</h2>
                 <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">{founder.role || 'Founder'}</p>
                 
-                {founder.message && (
-                  <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
-                    <p className="text-grey-light italic leading-relaxed">
-                      "{founder.message}"
-                    </p>
-                  </div>
-                )}
-                
-                {founder.experience && (
+                {founder.qualification && (
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
+                    <h4 className="text-white font-semibold mb-2">Experience & Bio</h4>
                     <p className="text-grey-light text-sm leading-relaxed whitespace-pre-wrap">
-                      {founder.experience}
+                      {founder.qualification}
                     </p>
                   </div>
                 )}
