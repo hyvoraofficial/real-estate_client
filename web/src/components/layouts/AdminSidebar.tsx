@@ -24,7 +24,7 @@ export const AdminSidebar: React.FC = () => {
   };
 
   const navItems = [
-    { name: 'Dashboard', path: '/admin/dashboard', icon: LayoutDashboard },
+    { name: 'Dashboard', path: '/admin', icon: LayoutDashboard },
     { name: 'Projects', path: '/admin/projects', icon: Building },
     { name: 'Properties', path: '/admin/properties', icon: Home },
     { name: 'Pricing Rules', path: '/admin/pricing-rules', icon: Calculator },
@@ -44,7 +44,9 @@ export const AdminSidebar: React.FC = () => {
       <nav className="flex-1 overflow-y-auto py-4">
         <ul className="space-y-1 px-3">
           {navItems.map((item) => {
-            const isActive = location.pathname.startsWith(item.path);
+            const isActive = item.path === '/admin' 
+              ? location.pathname === '/admin' 
+              : location.pathname.startsWith(item.path);
             return (
               <li key={item.name}>
                 <Link
