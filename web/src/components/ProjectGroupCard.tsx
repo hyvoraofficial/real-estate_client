@@ -50,21 +50,24 @@ export const ProjectGroupCard: React.FC<ProjectGroupCardProps> = ({ group }) => 
           </div>
         )}
         
-        {/* Badges */}
-        <div className="absolute top-4 right-4 bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+        {/* Type Badge */}
+        <div className="absolute bottom-4 right-4 bg-primary text-white px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider shadow-md">
           {group.type === 'flat' ? (group.unitType ? `Flat - ${group.unitType.toUpperCase()}` : 'Flats') : 
            group.type === 'shop' ? (group.sizeSqFt ? `Shop - ${group.sizeSqFt} sq.ft` : 'Shops') : 'Offices'}
         </div>
         
-        {group.availableCount > 0 ? (
-          <div className="absolute top-4 left-4 bg-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
-            {group.availableCount} Available
-          </div>
-        ) : (
-          <div className="absolute top-4 left-4 bg-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
-            Sold Out
-          </div>
-        )}
+        {/* Availability Badge */}
+        <div className="absolute top-4 left-4 flex flex-col gap-2">
+          {group.availableCount > 0 ? (
+            <div className="bg-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md self-start">
+              {group.availableCount} Available
+            </div>
+          ) : (
+            <div className="bg-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md self-start">
+              Sold Out
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Content */}
