@@ -1,6 +1,7 @@
 import React from 'react';
 import { Building2, Home, Users, Clock, Target, Eye, ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import { Card } from '../components/Card';
+import { AnimatedCounter } from '../components/AnimatedCounter';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -33,22 +34,30 @@ export const AboutPage: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Building2 className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">10+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">
+              <AnimatedCounter end={10} suffix="+" />
+            </h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Projects</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Home className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">125+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">
+              <AnimatedCounter end={125} suffix="+" />
+            </h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Properties</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Users className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">1000+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">
+              <AnimatedCounter end={1000} suffix="+" />
+            </h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Tenants</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Clock className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">18+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">
+              <AnimatedCounter end={18} suffix="+" />
+            </h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
           </div>
         </div>

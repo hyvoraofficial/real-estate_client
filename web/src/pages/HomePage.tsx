@@ -8,6 +8,7 @@ import { bookingService } from '../services/booking.service';
 import { useAuthStore } from '../store/authStore';
 import type { Property, PropertyFilters, Booking } from '../types';
 import { Search, Filter, Building2, Home as HomeIcon, MapPin, Users, Clock, ShieldCheck, Award, HeartHandshake } from 'lucide-react';
+import { AnimatedCounter } from '../components/AnimatedCounter';
 import { formatCurrency } from '../utils/helpers';
 import toast from 'react-hot-toast';
 
@@ -452,22 +453,30 @@ export const HomePage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
               <Building2 className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">10+</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+                <AnimatedCounter end={10} suffix="+" />
+              </h3>
               <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Projects</p>
             </div>
             <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
               <HomeIcon className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">125+</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+                <AnimatedCounter end={125} suffix="+" />
+              </h3>
               <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Properties</p>
             </div>
             <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
               <Users className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">1000+</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+                <AnimatedCounter end={1000} suffix="+" />
+              </h3>
               <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Tenants</p>
             </div>
             <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
               <Clock className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">18+</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+                <AnimatedCounter end={18} suffix="+" />
+              </h3>
               <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
             </div>
           </div>
