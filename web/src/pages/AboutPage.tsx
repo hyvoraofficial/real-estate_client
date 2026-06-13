@@ -20,10 +20,10 @@ export const AboutPage: React.FC = () => {
         <h2 className="text-3xl font-bold text-white mb-6 font-serif">Our Story</h2>
         <div className="space-y-4 text-grey-light leading-relaxed">
           <p>
-            SK Buildings began with a simple yet powerful idea: to provide high-quality, reliable, and accessible living and commercial spaces. What started as a modest endeavor has grown into a trusted name in the real estate sector.
+            The SK Buildings journey began in 2008 when our founder, Sunil M, developed his very first project on his own land. This foundational step sparked a career dedicated to creating high-quality, reliable, and accessible living and commercial spaces.
           </p>
           <p>
-            Over the years, we have continuously evolved, embracing modern architecture while staying true to our core values of integrity and customer satisfaction. Every project we undertake is a testament to our dedication to building not just structures, but vibrant communities where people can thrive.
+            A unique hallmark of SK Buildings is our unyielding commitment to ownership and quality. To this day, every single project we develop is built exclusively on our own land—we rely on no external land acquisitions. In addition to our own developments, we have also successfully participated in Joint Developments (JD) using our own land. This deep-rooted ownership ensures that our core values of integrity, trust, and superior architecture are never compromised.
           </p>
         </div>
       </section>
@@ -33,22 +33,22 @@ export const AboutPage: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Building2 className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">15+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">10+</h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Projects</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Home className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">120+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">125+</h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Properties</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Users className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">500+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">1000+</h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Tenants</p>
           </div>
           <div className="bg-dark-lighter p-6 rounded-2xl text-center border border-grey-dark hover:border-[#d4af37]/50 transition-colors group">
             <Clock className="mx-auto text-[#d4af37] mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <h3 className="text-3xl font-bold text-white mb-1">10+</h3>
+            <h3 className="text-3xl font-bold text-white mb-1">15+</h3>
             <p className="text-grey-light text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
           </div>
         </div>
@@ -63,19 +63,19 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
         <div className="flex-1 space-y-4 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-white font-serif">Sunil Kumar</h2>
+          <h2 className="text-3xl font-bold text-white font-serif">Sunil M</h2>
           <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">Founder & Chairman</p>
           
           <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
             <p className="text-grey-light italic leading-relaxed">
-              "Our mission has always been to build more than just four walls. We strive to create environments that inspire, protect, and nurture the families and businesses that reside within them. Trust is the foundation of every brick we lay."
+              "When I built our very first project back in 2008, my vision was to create more than just four walls. We wanted to build communities where trust is absolute. That is why I maintain a direct connection with all my tenants. No middlemen—just direct, transparent communication and complete peace of mind."
             </p>
           </div>
           
           <div>
             <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
             <p className="text-grey-light text-sm leading-relaxed">
-              With over a decade of hands-on experience in real estate development and property management, Sunil Kumar has led SK Buildings from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies.
+              With over 15 years of hands-on experience, Sunil M has transformed his personal land investments into a prominent real estate portfolio of over 10 major projects. His visionary approach bypasses the traditional landlord-tenant barriers, treating every one of our 1000+ tenants like extended family with direct, open access to ownership.
             </p>
           </div>
         </div>
@@ -120,11 +120,11 @@ export const AboutPage: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center space-y-4">
             <div className="bg-[#d4af37]/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
-              <ShieldCheck className="text-[#d4af37]" size={40} />
+              <HeartHandshake className="text-[#d4af37]" size={40} />
             </div>
-            <h3 className="text-xl font-bold text-white">Uncompromised Security</h3>
+            <h3 className="text-xl font-bold text-white">Direct Owner Access</h3>
             <p className="text-grey-light text-sm leading-relaxed">
-              Our properties are equipped with 24/7 security, modern surveillance systems, and safe access protocols to ensure you and your family always feel secure.
+              No middlemen, no frustrating management companies. Every single tenant has the ability to directly contact the owner, ensuring rapid responses and genuine care.
             </p>
           </div>
           
@@ -132,19 +132,19 @@ export const AboutPage: React.FC = () => {
             <div className="bg-[#d4af37]/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
               <Award className="text-[#d4af37]" size={40} />
             </div>
-            <h3 className="text-xl font-bold text-white">Premium Quality</h3>
+            <h3 className="text-xl font-bold text-white">Built on Owned Land</h3>
             <p className="text-grey-light text-sm leading-relaxed">
-              From the foundation to the finishing touches, we use only the highest quality materials and partner with expert architects to build structures that last generations.
+              Every project is constructed exclusively on land owned directly by SK Buildings. This deep-rooted ownership guarantees absolute stability and zero legal ambiguity for our tenants.
             </p>
           </div>
 
           <div className="text-center space-y-4">
             <div className="bg-[#d4af37]/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
-              <HeartHandshake className="text-[#d4af37]" size={40} />
+              <ShieldCheck className="text-[#d4af37]" size={40} />
             </div>
-            <h3 className="text-xl font-bold text-white">Tenant-First Approach</h3>
+            <h3 className="text-xl font-bold text-white">Uncompromised Security</h3>
             <p className="text-grey-light text-sm leading-relaxed">
-              We believe in treating our tenants like family. Our dedicated maintenance team is always on standby to resolve issues quickly and efficiently.
+              Our properties are equipped with 24/7 security, modern surveillance systems, and safe access protocols to ensure you and your family always feel secure.
             </p>
           </div>
         </div>
