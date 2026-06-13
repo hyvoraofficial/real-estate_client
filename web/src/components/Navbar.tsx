@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
 
             {/* Company Name */}
             <Link to="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold text-primary tracking-wide">SK Buildings</span>
+              <span className="text-xl md:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
             </Link>
           </div>
 

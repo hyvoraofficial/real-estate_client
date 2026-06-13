@@ -190,8 +190,10 @@ export const HomePage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
         
         {/* Left Column (1/4): Logo */}
-        <div className="md:col-span-1 bg-white flex items-center justify-center p-0 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
-          <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" />
+        <div className="md:col-span-1 bg-white flex items-center justify-center p-6 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative h-full">
+          <h1 className="text-3xl lg:text-4xl text-center text-primary uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, lineHeight: 1.1 }}>
+            SK<br />BUILDINGS
+          </h1>
         </div>
 
         {/* Right Column (3/4): Hero Image & Search */}
