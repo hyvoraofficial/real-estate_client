@@ -41,11 +41,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-dark-light border-b border-primary/30 sticky top-0 z-40 backdrop-blur-sm">
-      <div className="container mx-auto px-4 relative">
+      <div className="w-full pl-4 md:pl-0 pr-4 md:pr-8 relative">
         <div className="flex items-center justify-between h-14 md:h-16">
           
           {/* Left Side: Hamburger Menu & Company Name */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center md:w-1/4 md:justify-center space-x-4">
             {/* Hamburger Menu Button */}
             {!isAdminRoute && (
               <button 
