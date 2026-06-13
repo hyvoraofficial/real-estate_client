@@ -15,6 +15,8 @@ import { PropertyDetailsPage } from './pages/PropertyDetailsPage';
 import { BookingPage } from './pages/BookingPage';
 import { UserDashboard } from './pages/UserDashboard';
 import { AboutPage } from './pages/AboutPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsConditionsPage } from './pages/TermsConditionsPage';
 import { MainLayout } from './components/layouts/MainLayout';
 import { AdminLayout } from './components/layouts/AdminLayout';
 
