@@ -7,7 +7,7 @@ import { propertyService } from '../services/property.service';
 import { bookingService } from '../services/booking.service';
 import { useAuthStore } from '../store/authStore';
 import type { Property, PropertyFilters, Booking } from '../types';
-import { Search, Filter, Building2, Home as HomeIcon, MapPin } from 'lucide-react';
+import { Search, Filter, Building2, Home as HomeIcon, MapPin, Users, Clock, ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import { formatCurrency } from '../utils/helpers';
 import toast from 'react-hot-toast';
 
@@ -446,6 +446,75 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
         )}
+
+        {/* Statistics Section */}
+        <section className="mt-24 pt-12 border-t border-slate-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Building2 className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">10+</h3>
+              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Projects</p>
+            </div>
+            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <HomeIcon className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">125+</h3>
+              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Properties</p>
+            </div>
+            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Users className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">1000+</h3>
+              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Tenants</p>
+            </div>
+            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Clock className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
+              <h3 className="text-3xl font-bold text-slate-900 mb-1">18+</h3>
+              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose SK Buildings Section */}
+        <section className="mt-24 space-y-12 pb-16">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-serif">Why Choose SK Buildings?</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
+                <ShieldCheck className="text-primary" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Uncompromised Security</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Our properties are equipped with 24/7 security, modern surveillance systems, and safe access protocols to ensure you and your family always feel secure.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
+                <Award className="text-primary" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Premium Quality</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                From the foundation to the finishing touches, we use only the highest quality materials and partner with expert architects to build structures that last generations.
+              </p>
+            </div>
+
+            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
+                <HeartHandshake className="text-primary" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Tenant-First Approach</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                We believe in treating our tenants like family. Our dedicated maintenance team is always on standby to resolve issues quickly and efficiently.
+              </p>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   );
