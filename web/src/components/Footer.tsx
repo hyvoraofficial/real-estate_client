@@ -70,8 +70,8 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-[#d4af37] text-xl font-serif mb-6">Legal</h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-[#d4af37] transition-colors block">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[#d4af37] transition-colors block">Terms & Conditions</a></li>
+              <li><Link to="/privacy-policy" className="hover:text-[#d4af37] transition-colors block">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions" className="hover:text-[#d4af37] transition-colors block">Terms & Conditions</Link></li>
             </ul>
           </div>
         </div>

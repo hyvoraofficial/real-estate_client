@@ -54,6 +54,8 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/properties" element={<HomePage />} />
             <Route path="/projects/:projectName/:type" element={<ProjectPropertiesPage />} />
