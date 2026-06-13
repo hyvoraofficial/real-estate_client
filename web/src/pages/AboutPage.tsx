@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Building2, Home, Users, Clock, Target, Eye, ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import { Card } from '../components/Card';
 import { AnimatedCounter } from '../components/AnimatedCounter';
+import { founderService } from '../services/founder.service';
+import type { Founder } from '../types';
 
 export const AboutPage: React.FC = () => {
+  const [founders, setFounders] = useState<Founder[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFounders = async () => {
+      try {
+        const data = await founderService.getFounders();
+        setFounders(data);
+      } catch (error) {
+        console.error("Failed to load founders:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchFounders();
+  }, []);
+
   return (
     <div className="min-h-screen bg-dark py-12 px-4 sm:px-8 max-w-7xl mx-auto space-y-24">
       
@@ -64,31 +83,74 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 4. Founder Section */}
-      <section className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-center">
-        <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.2)]">
-          {/* Placeholder for Founder Photo */}
-          <div className="w-full h-full bg-grey-dark flex items-center justify-center">
-            <Users size={64} className="text-grey-light" />
-          </div>
+      {isLoading ? (
+        <div className="flex justify-center p-12">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#d4af37]"></div>
         </div>
-        <div className="flex-1 space-y-4 text-center md:text-left">
-          <h2 className="text-3xl font-bold text-white font-serif">Sunil Kumar</h2>
-          <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">Founder & Chairman</p>
-          
-          <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
-            <p className="text-grey-light italic leading-relaxed">
-              "Our mission has always been to build more than just four walls. We strive to create environments that inspire, protect, and nurture the families and businesses that reside within them. Trust is the foundation of every brick we lay."
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
-            <p className="text-grey-light text-sm leading-relaxed">
-              With over 18 years of hands-on experience in real estate development and property management since founding SK Buildings in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies.
-            </p>
-          </div>
+      ) : founders.length > 0 ? (
+        <div className="space-y-12">
+          {founders.map((founder, index) => (
+            <section key={founder.id || index} className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-center">
+              <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+                {founder.image ? (
+                  <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-grey-dark flex items-center justify-center">
+                    <Users size={64} className="text-grey-light" />
+                  </div>
+                )}
+              </div>
+              <div className="flex-1 space-y-4 text-center md:text-left">
+                <h2 className="text-3xl font-bold text-white font-serif">{founder.name}</h2>
+                <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">{founder.role || 'Founder'}</p>
+                
+                {founder.message && (
+                  <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
+                    <p className="text-grey-light italic leading-relaxed">
+                      "{founder.message}"
+                    </p>
+                  </div>
+                )}
+                
+                {founder.experience && (
+                  <div>
+                    <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
+                    <p className="text-grey-light text-sm leading-relaxed whitespace-pre-wrap">
+                      {founder.experience}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </section>
+          ))}
         </div>
-      </section>
+      ) : (
+        <section className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-center">
+          <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+            {/* Placeholder for Founder Photo */}
+            <div className="w-full h-full bg-grey-dark flex items-center justify-center">
+              <Users size={64} className="text-grey-light" />
+            </div>
+          </div>
+          <div className="flex-1 space-y-4 text-center md:text-left">
+            <h2 className="text-3xl font-bold text-white font-serif">Sunil Kumar</h2>
+            <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">Founder & Chairman</p>
+            
+            <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
+              <p className="text-grey-light italic leading-relaxed">
+                "Our mission has always been to build more than just four walls. We strive to create environments that inspire, protect, and nurture the families and businesses that reside within them. Trust is the foundation of every brick we lay."
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
+              <p className="text-grey-light text-sm leading-relaxed">
+                With over 18 years of hands-on experience in real estate development and property management since founding SK Buildings in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 5 & 6. Vision and Mission */}
       <section className="grid md:grid-cols-2 gap-8">
