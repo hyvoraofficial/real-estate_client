@@ -27,9 +27,9 @@ export const AboutPage: React.FC = () => {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap');
         .commanding-calm-font {
-          font-family: 'Outfit', sans-serif;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
           letter-spacing: -0.5px;
         }
       `}} />
