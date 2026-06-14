@@ -70,7 +70,7 @@ export const AnniversarySplash: React.FC = () => {
             Sunil <Heart className="text-red-500 animate-pulse inline w-8 h-8 md:w-12 md:h-12" fill="currentColor" /> Kavitha
           </h2>
           <p className="text-lg md:text-2xl text-slate-500 italic mt-4 md:mt-8 max-w-2xl mx-auto leading-relaxed font-serif px-4">
-            Wishing the visionary founders of SK Buildings a lifetime of love, joy, and continued success together.
+            Wishing the visionary founders of <span className="brand-text text-sm md:text-lg">SK Buildings</span> a lifetime of love, joy, and continued success together.
           </p>
         </div>
 

@@ -42,7 +42,7 @@ export const AboutPage: React.FC = () => {
         
         {/* 1. About SK Buildings Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] commanding-calm-font">About SK Buildings</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] commanding-calm-font">About <span className="brand-text text-[#d4af37]">SK Buildings</span></h1>
           <p className="text-grey-light max-w-3xl mx-auto text-lg leading-relaxed">
             Building the foundation of tomorrow with trust, quality, and unparalleled excellence in real estate and property management since 2008.
           </p>
@@ -54,7 +54,7 @@ export const AboutPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-6 commanding-calm-font">Our Story</h2>
           <div className="space-y-4 text-grey-light leading-relaxed">
             <p>
-              SK Buildings began its journey in 2008 with a simple yet powerful idea: to provide high-quality, reliable, and accessible living and commercial spaces. What started as a modest endeavor has grown into a trusted name in the real estate sector.
+              <span className="brand-text text-white text-sm">SK Buildings</span> began its journey in 2008 with a simple yet powerful idea: to provide high-quality, reliable, and accessible living and commercial spaces. What started as a modest endeavor has grown into a trusted name in the real estate sector.
             </p>
             <p>
               Over the years, we have continuously evolved, embracing modern architecture while staying true to our core values of integrity and customer satisfaction. Every project we undertake is a testament to our dedication to building not just structures, but vibrant communities where people can thrive.
@@ -150,7 +150,7 @@ export const AboutPage: React.FC = () => {
               <div>
                 <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
                 <p className="text-grey-light text-sm leading-relaxed">
-                  With over 18 years of hands-on experience in real estate development and property management since founding SK Buildings in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies.
+                  "With over 18 years of hands-on experience in real estate development and property management since founding <span className="brand-text text-white text-xs">SK Buildings</span> in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies."
                 </p>
               </div>
             </div>
@@ -187,7 +187,7 @@ export const AboutPage: React.FC = () => {
         {/* 7. Why Choose SK Buildings */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 commanding-calm-font">Why Choose SK Buildings?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4 commanding-calm-font">Why Choose <span className="brand-text text-white">SK Buildings</span>?</h2>
             <p className="text-grey-light max-w-2xl mx-auto">
               We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
             </p>

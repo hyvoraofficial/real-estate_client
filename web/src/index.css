@@ -43,6 +43,13 @@
     @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-xl;
   }
 
+  .brand-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .glass-panel-dark {
     @apply bg-slate-900/80 backdrop-blur-md border border-slate-700/50 shadow-2xl;
   }

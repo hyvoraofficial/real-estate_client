@@ -59,7 +59,7 @@ export const FounderPage: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] font-serif">Meet Our Founder</h1>
-            <p className="text-grey-light text-lg">The vision and leadership behind SK Buildings.</p>
+            <p className="text-grey-light text-lg">The vision and leadership behind <span className="brand-text">SK Buildings</span>.</p>
           </div>
 
           <div className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-start shadow-2xl relative overflow-hidden">

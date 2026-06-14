@@ -508,7 +508,7 @@ export const HomePage: React.FC = () => {
         {/* Why Choose SK Buildings Section */}
         <section className="mt-24 space-y-12 pb-16">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-serif">Why Choose SK Buildings?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-serif">Why Choose <span className="brand-text text-slate-900">SK Buildings</span>?</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
             </p>
