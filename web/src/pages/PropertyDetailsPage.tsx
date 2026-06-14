@@ -4,10 +4,11 @@ import { propertyService } from '../services/property.service';
 import type { Property } from '../types';
 import { Loading } from '../components/Loading';
 import { Button } from '../components/Button';
-import { getPropertyPriceDisplay, getWhatsAppLink, getCallLink } from '../utils/helpers';
-import { MapPin, Square, Bed, Bath, Phone, MessageCircle, Calendar, IndianRupee } from 'lucide-react';
+import { getPropertyPriceDisplay, getWhatsAppLink, getCallLink, formatCurrency } from '../utils/helpers';
+import { MapPin, Square, Bed, Bath, Phone, MessageCircle, Calendar, IndianRupee, Users } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useAuthStore } from '../store/authStore';
+import { Input } from '../components/Input';
 
 export const PropertyDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -16,6 +17,11 @@ export const PropertyDetailsPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
   const { isAuthenticated } = useAuthStore();
+
+  const [tenantType, setTenantType] = useState<'family' | 'bachelors' | ''>('');
+  const [numberOfPeople, setNumberOfPeople] = useState<number | ''>('');
+  const [moveInDate, setMoveInDate] = useState('');
+  const [dynamicRent, setDynamicRent] = useState<number | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -36,13 +42,34 @@ export const PropertyDetailsPage: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    if (property && numberOfPeople !== '' && (tenantType === 'bachelors' || property.type === 'shop')) {
+      const rules = (property as any).project?.pricing_rules;
+      if (rules) {
+        if (property.type === 'shop' && rules.shop) {
+          const shopRent = rules.shop[numberOfPeople.toString()];
+          if (shopRent) setDynamicRent(shopRent);
+          else setDynamicRent(null);
+        } else if (property.type === 'flat' && property.unit_type && rules.flat) {
+          const flatRent = rules.flat[property.unit_type]?.[numberOfPeople.toString()];
+          if (flatRent) setDynamicRent(flatRent);
+          else setDynamicRent(null);
+        } else {
+          setDynamicRent(null);
+        }
+      }
+    } else {
+      setDynamicRent(null);
+    }
+  }, [numberOfPeople, property, tenantType]);
+
   const handleBookNow = () => {
     if (!isAuthenticated) {
       toast.error('Please login to book');
       navigate('/login');
       return;
     }
-    navigate(`/booking/${id}`);
+    navigate(`/booking/${id}`, { state: { tenantType, numberOfPeople, moveInDate } });
   };
 
   if (isLoading) {
@@ -217,6 +244,76 @@ export const PropertyDetailsPage: React.FC = () => {
             <div className="card sticky top-20 space-y-4">
               <h3 className="text-2xl font-bold text-primary">Interested?</h3>
               
+              <div className="bg-dark-lighter p-4 rounded-lg space-y-4 mb-4 border border-[#d4af37]/20">
+                <h4 className="font-bold text-white mb-2">Check Pricing</h4>
+                
+                {property.type === 'flat' && (
+                  <div>
+                    <label className="block text-grey-light text-sm mb-2">Tenant Type</label>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setTenantType('family')}
+                        className={`p-2 rounded-lg border text-sm font-medium transition-all ${
+                          tenantType === 'family'
+                            ? 'border-primary bg-primary/10 text-primary'
+                            : 'border-grey-dark text-grey hover:border-primary'
+                        }`}
+                      >
+                        Family
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setTenantType('bachelors')}
+                        className={`p-2 rounded-lg border text-sm font-medium transition-all ${
+                          tenantType === 'bachelors'
+                            ? 'border-primary bg-primary/10 text-primary'
+                            : 'border-grey-dark text-grey hover:border-primary'
+                        }`}
+                      >
+                        Bachelors
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {(property.type !== 'flat' || tenantType === 'bachelors') && (
+                  <div>
+                    <label className="block text-grey-light text-sm mb-2">Number of People</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={numberOfPeople}
+                      onChange={(e) => setNumberOfPeople(e.target.value ? Number(e.target.value) : '')}
+                      placeholder="E.g., 2"
+                      icon={<Users size={18} />}
+                      className="bg-dark border-grey-dark text-white"
+                    />
+                  </div>
+                )}
+
+                <div>
+                  <label className="block text-grey-light text-sm mb-2">Incoming Date</label>
+                  <Input
+                    type="date"
+                    value={moveInDate}
+                    onChange={(e) => setMoveInDate(e.target.value)}
+                    min={new Date().toISOString().split('T')[0]}
+                    icon={<Calendar size={18} />}
+                    className="bg-dark border-grey-dark text-white"
+                  />
+                </div>
+
+                <div className="pt-3 border-t border-grey-dark/50">
+                  <div className="flex justify-between items-center text-lg">
+                    <span className="text-white font-medium">Estimated Rent:</span>
+                    <span className="text-primary font-bold">
+                      {dynamicRent ? formatCurrency(dynamicRent) : getPropertyPriceDisplay(property)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
               {property.status === 'available' && (
                 <Button onClick={handleBookNow} className="w-full" size="lg">
                   <IndianRupee size={20} className="mr-2" />

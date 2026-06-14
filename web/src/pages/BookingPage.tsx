@@ -17,14 +17,18 @@ export const BookingPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated } = useAuthStore();
+  
+  // Use state passed from PropertyDetailsPage if available
+  const initialState = location.state || {};
+  
   const [property, setProperty] = useState<Property | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [moveInDate, setMoveInDate] = useState('');
+  const [moveInDate, setMoveInDate] = useState(initialState.moveInDate || '');
   const [paymentType, setPaymentType] = useState<'online' | 'offline'>('online');
   const [rentDueDate, setRentDueDate] = useState('5');
-  const [numberOfPeople, setNumberOfPeople] = useState<number | ''>('');
-  const [tenantType, setTenantType] = useState<'family' | 'bachelors' | ''>('');
+  const [numberOfPeople, setNumberOfPeople] = useState<number | ''>(initialState.numberOfPeople || '');
+  const [tenantType, setTenantType] = useState<'family' | 'bachelors' | ''>(initialState.tenantType || '');
   const [dynamicRent, setDynamicRent] = useState<number | null>(null);
 
   useEffect(() => {
