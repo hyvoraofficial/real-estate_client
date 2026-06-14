@@ -10,6 +10,7 @@ import type { Property, PropertyFilters, Booking } from '../types';
 import { Search, Filter, Building2, Home as HomeIcon, MapPin, Users, Clock, ShieldCheck, Award, HeartHandshake } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { formatCurrency } from '../utils/helpers';
+import { SEO } from '../components/SEO';
 import toast from 'react-hot-toast';
 
 export const HomePage: React.FC = () => {
@@ -184,8 +185,30 @@ export const HomePage: React.FC = () => {
     return <Loading fullScreen />;
   }
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SK Buildings",
+    "url": "https://skbuildings.in",
+    "logo": "https://skbuildings.in/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9110443387",
+      "contactType": "customer service"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SK Building, Pattandur Agrahara, Whitefield Post",
+      "addressLocality": "Bengaluru",
+      "postalCode": "560066",
+      "addressCountry": "IN"
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-dark">
+    <React.Fragment>
+      <SEO schema={orgSchema} />
+      <div className="min-h-screen bg-dark">
       {/* Split Hero Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
         
@@ -525,6 +548,7 @@ export const HomePage: React.FC = () => {
         </section>
 
       </div>
-    </div>
+      </div>
+    </React.Fragment>
   );
 };

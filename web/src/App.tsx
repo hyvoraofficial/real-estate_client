@@ -17,6 +17,8 @@ import { UserDashboard } from './pages/UserDashboard';
 import { AboutPage } from './pages/AboutPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsConditionsPage } from './pages/TermsConditionsPage';
+import { FounderPage } from './pages/FounderPage';
+import { SEOLandingPage } from './pages/SEOLandingPage';
 import { MainLayout } from './components/layouts/MainLayout';
 import { AdminLayout } from './components/layouts/AdminLayout';
 
@@ -56,11 +58,18 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/founder" element={<FounderPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/properties" element={<HomePage />} />
             <Route path="/projects/:projectName/:type" element={<ProjectPropertiesPage />} />
+            
+            {/* SEO Landing Pages */}
+            <Route path="/flats-for-rent-whitefield" element={<SEOLandingPage />} />
+            <Route path="/1bhk-whitefield" element={<SEOLandingPage />} />
+            <Route path="/commercial-shops-whitefield" element={<SEOLandingPage />} />
+            <Route path="/rental-properties-bangalore" element={<SEOLandingPage />} />
             
             {/* Public Property Details */}
             <Route path="/properties/:id" element={<PropertyDetailsPage />} />

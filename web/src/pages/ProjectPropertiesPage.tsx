@@ -5,6 +5,7 @@ import { Loading } from '../components/Loading';
 import { propertyService } from '../services/property.service';
 import type { Property } from '../types';
 import { ArrowLeft, Building2 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import toast from 'react-hot-toast';
 
 export const ProjectPropertiesPage: React.FC = () => {
@@ -44,8 +45,14 @@ export const ProjectPropertiesPage: React.FC = () => {
   const titleType = type === 'flat' ? 'Flats' : type === 'shop' ? 'Shops' : 'Offices';
 
   return (
-    <div className="min-h-screen bg-dark">
-      <div className="container mx-auto px-4 py-8">
+    <>
+      <SEO 
+        title={`${projectName} - ${titleType} | SK Buildings`}
+        description={`Explore available ${titleType.toLowerCase()} at ${projectName} by SK Buildings.`}
+        url={`https://skbuildings.in/projects/${encodeURIComponent(projectName || '')}/${encodeURIComponent(type || '')}`}
+      />
+      <div className="min-h-screen bg-dark">
+        <div className="container mx-auto px-4 py-8">
         
         {/* Header */}
         <div className="mb-10">
@@ -83,5 +90,6 @@ export const ProjectPropertiesPage: React.FC = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
