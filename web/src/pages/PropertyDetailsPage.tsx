@@ -218,7 +218,22 @@ export const PropertyDetailsPage: React.FC = () => {
 
               <div className="pt-4 border-t border-grey-dark">
                 <h3 className="text-xl font-bold text-white mb-3">Description</h3>
-                <p className="text-grey-light leading-relaxed">{property.description}</p>
+                <p className="text-grey-light leading-relaxed mb-6">{property.description}</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="bg-dark-lighter p-4 rounded-lg space-y-2 border border-grey-dark/30">
+                    <h4 className="font-bold text-white">Property ID</h4>
+                    <p className="text-grey-light text-sm">{property.id}</p>
+                  </div>
+
+                  <div className="bg-dark-lighter p-4 rounded-lg space-y-2 border border-grey-dark/30">
+                    <h4 className="font-bold text-white">Location</h4>
+                    <p className="text-grey-light text-sm">
+                      {property.location.city}, {property.location.state}
+                    </p>
+                    <p className="text-grey-light text-sm">PIN: {property.location.pincode}</p>
+                  </div>
+                </div>
               </div>
 
               {property.amenities && property.amenities.length > 0 && (
@@ -340,18 +355,6 @@ export const PropertyDetailsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="bg-dark-lighter p-4 rounded-lg space-y-2">
-                <h4 className="font-bold text-white">Property ID</h4>
-                <p className="text-grey-light text-sm">{property.id}</p>
-              </div>
-
-              <div className="bg-dark-lighter p-4 rounded-lg space-y-2">
-                <h4 className="font-bold text-white">Location</h4>
-                <p className="text-grey-light text-sm">
-                  {property.location.city}, {property.location.state}
-                </p>
-                <p className="text-grey-light text-sm">PIN: {property.location.pincode}</p>
-              </div>
             </div>
           </div>
         </div>
