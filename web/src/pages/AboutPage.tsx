@@ -26,6 +26,13 @@ export const AboutPage: React.FC = () => {
 
   return (
     <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+        .commanding-calm-font {
+          font-family: 'Playfair Display', serif;
+          letter-spacing: -0.5px;
+        }
+      `}} />
       <SEO 
         title="About SK Buildings | Our Founders & Vision" 
         description="Learn about SK Buildings, our founders, and our commitment to delivering exceptional properties and joint development projects in Bangalore."
@@ -35,7 +42,7 @@ export const AboutPage: React.FC = () => {
         
         {/* 1. About SK Buildings Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] font-serif">About SK Buildings</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] commanding-calm-font">About SK Buildings</h1>
           <p className="text-grey-light max-w-3xl mx-auto text-lg leading-relaxed">
             Building the foundation of tomorrow with trust, quality, and unparalleled excellence in real estate and property management since 2008.
           </p>
@@ -44,7 +51,7 @@ export const AboutPage: React.FC = () => {
         {/* 2. Our Story */}
         <section className="bg-dark-lighter p-8 md:p-12 rounded-2xl border border-[#d4af37]/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-          <h2 className="text-3xl font-bold text-white mb-6 font-serif">Our Story</h2>
+          <h2 className="text-3xl font-bold text-white mb-6 commanding-calm-font">Our Story</h2>
           <div className="space-y-4 text-grey-light leading-relaxed">
             <p>
               SK Buildings began its journey in 2008 with a simple yet powerful idea: to provide high-quality, reliable, and accessible living and commercial spaces. What started as a modest endeavor has grown into a trusted name in the real estate sector.
@@ -108,7 +115,7 @@ export const AboutPage: React.FC = () => {
                   )}
                 </div>
                 <div className="flex-1 space-y-4 text-center md:text-left">
-                  <h2 className="text-3xl font-bold text-white font-serif">{founder.name}</h2>
+                  <h2 className="text-3xl font-bold text-white commanding-calm-font">{founder.name}</h2>
                   <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">{founder.role || 'Founder'}</p>
                   
                   {founder.qualification && (
@@ -131,7 +138,7 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
             <div className="flex-1 space-y-4 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-white font-serif">Sunil Kumar</h2>
+              <h2 className="text-3xl font-bold text-white commanding-calm-font">Sunil Kumar</h2>
               <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-sm">Founder & Chairman</p>
               
               <div className="bg-dark/50 p-6 rounded-xl border-l-4 border-[#d4af37] my-6 text-left">
@@ -157,7 +164,7 @@ export const AboutPage: React.FC = () => {
               <div className="bg-[#d4af37]/10 p-3 rounded-xl">
                 <Eye className="text-[#d4af37]" size={32} />
               </div>
-              <h2 className="text-2xl font-bold text-white font-serif">Our Vision</h2>
+              <h2 className="text-2xl font-bold text-white commanding-calm-font">Our Vision</h2>
             </div>
             <p className="text-grey-light leading-relaxed">
               To be the most trusted and innovative real estate developer in the region, recognized for our commitment to quality, sustainable building practices, and creating spaces that significantly enhance the quality of life for our residents and business partners.
@@ -169,7 +176,7 @@ export const AboutPage: React.FC = () => {
               <div className="bg-[#d4af37]/10 p-3 rounded-xl">
                 <Target className="text-[#d4af37]" size={32} />
               </div>
-              <h2 className="text-2xl font-bold text-white font-serif">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-white commanding-calm-font">Our Mission</h2>
             </div>
             <p className="text-grey-light leading-relaxed">
               To deliver exceptional property management and development services by prioritizing transparency, architectural excellence, and tenant satisfaction. We aim to build enduring relationships with our clients by consistently exceeding their expectations.
@@ -180,7 +187,7 @@ export const AboutPage: React.FC = () => {
         {/* 7. Why Choose SK Buildings */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 font-serif">Why Choose SK Buildings?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4 commanding-calm-font">Why Choose SK Buildings?</h2>
             <p className="text-grey-light max-w-2xl mx-auto">
               We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
             </p>
