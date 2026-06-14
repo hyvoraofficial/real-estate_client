@@ -56,33 +56,33 @@ export const AnniversarySplash: React.FC = () => {
 
       <button 
         onClick={handleClose}
-        className="absolute top-6 right-6 z-50 bg-white border border-slate-200 hover:bg-[#d4af37] hover:text-white text-slate-500 p-3 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
+        className="absolute top-4 right-4 md:top-6 md:right-6 z-50 bg-white border border-slate-200 hover:bg-[#d4af37] hover:text-white text-slate-500 p-2 md:p-3 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
       >
-        <X size={28} />
+        <X size={24} className="md:w-7 md:h-7" />
       </button>
 
-      <div className="relative z-10 max-w-5xl w-full px-4 py-12 flex flex-col items-center text-center space-y-10">
-        <div className="space-y-4 animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-bold text-[#d4af37] drop-shadow-sm custom-love-font">
+      <div className="relative z-10 max-w-5xl w-full px-4 pt-20 pb-8 md:py-12 flex flex-col items-center text-center space-y-6 md:space-y-10">
+        <div className="space-y-2 md:space-y-4 animate-fade-in-up px-2">
+          <h1 className="text-5xl md:text-8xl font-bold text-[#d4af37] drop-shadow-sm custom-love-font leading-tight">
             Happy Anniversary!!
           </h1>
-          <h2 className="text-5xl md:text-7xl text-slate-800 mt-4 custom-love-font flex items-center justify-center gap-4 flex-wrap">
-            Sunil <Heart className="text-red-500 animate-pulse inline" size={48} fill="currentColor" /> Kavitha
+          <h2 className="text-4xl md:text-7xl text-slate-800 mt-2 md:mt-4 custom-love-font flex items-center justify-center gap-2 md:gap-4 flex-wrap leading-tight">
+            Sunil <Heart className="text-red-500 animate-pulse inline w-8 h-8 md:w-12 md:h-12" fill="currentColor" /> Kavitha
           </h2>
-          <p className="text-xl md:text-2xl text-slate-500 italic mt-8 max-w-2xl mx-auto leading-relaxed font-serif">
+          <p className="text-lg md:text-2xl text-slate-500 italic mt-4 md:mt-8 max-w-2xl mx-auto leading-relaxed font-serif px-4">
             Wishing the visionary founders of SK Buildings a lifetime of love, joy, and continued success together.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-105 transition-transform duration-500">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div className="w-56 h-56 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-105 transition-transform duration-500">
             <img 
               src="/anniversary-1.jpg" 
               alt="Sunil and Kavitha" 
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-105 transition-transform duration-500">
+          <div className="w-56 h-56 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.3)] transform hover:scale-105 transition-transform duration-500">
             <img 
               src="/anniversary-2.jpg" 
               alt="Sunil and Kavitha" 
