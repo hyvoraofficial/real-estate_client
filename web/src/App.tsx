@@ -21,7 +21,6 @@ import { FounderPage } from './pages/FounderPage';
 import { SEOLandingPage } from './pages/SEOLandingPage';
 import { MainLayout } from './components/layouts/MainLayout';
 import { AdminLayout } from './components/layouts/AdminLayout';
-import { AnniversarySplash } from './components/AnniversarySplash';
 
 // Admin Pages
 import { AdminOverview } from './pages/admin/AdminOverview';
@@ -53,7 +52,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <AnniversarySplash />
         <ScrollToTop />
         <Routes>
           {/* Main Tenant / Public Routes */}
