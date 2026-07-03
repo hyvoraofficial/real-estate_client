@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-dark-light border-b border-primary/30 sticky top-0 z-40 backdrop-blur-sm">
+    <nav className="bg-dark-light border-b border-primary/30 sticky top-0 z-[999] backdrop-blur-sm">
       <div className="w-full pl-4 md:pl-0 pr-4 md:pr-8 relative">
         <div className="flex items-center justify-between h-14 md:h-16">
           
@@ -50,17 +50,20 @@ export const Navbar: React.FC = () => {
             {!isAdminRoute && (
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
+                className="hidden md:block text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
                 title="Menu"
               >
                 <Menu size={24} />
               </button>
             )}
 
-            {/* Company Name */}
-            <Link to="/" className="flex items-center">
-              <img src="/logo-without_name.png" alt="SK Buildings Logo" className="h-8 w-8 md:hidden object-contain mr-2" />
-              <span className="text-xl md:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
+            {/* Company Name / Logo Box */}
+            <Link 
+              to="/" 
+              className="flex items-center bg-white p-0 shadow-lg border-x border-b border-slate-200 rounded-b-xl h-24 w-20 z-50 translate-y-[12px] md:bg-transparent md:p-0 md:shadow-none md:border-none md:rounded-none md:h-auto md:w-auto md:translate-y-0"
+            >
+              <img src="/logo.png" alt="SK Buildings Logo" className="h-full w-full object-contain md:hidden" />
+              <span className="hidden md:inline text-xl md:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
             </Link>
           </div>
 
@@ -86,6 +89,17 @@ export const Navbar: React.FC = () => {
 
           {/* User Section */}
           <div className="flex items-center space-x-4">
+            {/* Hamburger Menu Button (Mobile only) */}
+            {!isAdminRoute && (
+              <button 
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
+                title="Menu"
+              >
+                <Menu size={24} />
+              </button>
+            )}
+
             {isAuthenticated && user?.role !== 'admin' ? (
               <>
                 <div className="hidden md:block text-right">
@@ -113,7 +127,7 @@ export const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div 
             ref={menuRef}
-            className="absolute top-14 md:top-16 left-4 w-64 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2"
+            className="absolute top-14 md:top-16 right-4 md:left-4 md:right-auto w-64 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2"
           >
             <div className="p-2">
               <button 
