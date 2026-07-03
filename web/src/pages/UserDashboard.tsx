@@ -105,10 +105,10 @@ export const UserDashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-dark py-12">
+    <div className="min-h-screen bg-dark py-8 md:py-12">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold text-primary">My Dashboard</h1>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-primary">My Dashboard</h1>
           <Button onClick={() => navigate('/')}>
             <Home size={20} className="mr-2" />
             Browse Properties
@@ -162,7 +162,7 @@ export const UserDashboard: React.FC = () => {
         )}
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
           <Card>
             <div className="flex items-center justify-between">
               <div>
@@ -199,7 +199,7 @@ export const UserDashboard: React.FC = () => {
         {/* Bookings List */}
         <h2 className="text-2xl font-bold text-white mb-6">My Properties</h2>
         {bookings.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
             {bookings.map((booking) => {
               const property = typeof booking.property === 'object' ? booking.property : null;
               return (

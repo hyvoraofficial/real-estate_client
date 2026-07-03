@@ -159,11 +159,11 @@ export const SEOLandingPage: React.FC = () => {
         description={config.description}
         url={`https://skbuildings.in${location.pathname}`}
       />
-      <div className="min-h-screen bg-dark pt-24 pb-12">
+      <div className="min-h-screen bg-dark pt-12 md:pt-24 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           
           <div className="text-center mb-12 space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] font-serif">{config.h1}</h1>
+             <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] font-serif">{config.h1}</h1>
             <p className="text-grey-light text-lg max-w-2xl mx-auto">
               {config.description}
             </p>
@@ -172,7 +172,7 @@ export const SEOLandingPage: React.FC = () => {
           {isLoading ? (
             <Loading />
           ) : projectGroups.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {projectGroups.map((group) => (
                 <ProjectGroupCard key={`${group.projectName}-${group.type}`} group={group} />
               ))}

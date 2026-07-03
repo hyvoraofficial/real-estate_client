@@ -213,8 +213,8 @@ export const HomePage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
         
         {/* Left Column (1/4): Logo */}
-        <div className="md:col-span-1 bg-white flex items-center justify-center p-0 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
-          <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" />
+        <div className="md:col-span-1 bg-white flex items-center justify-center p-2 md:p-0 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-24 md:h-full">
+          <img src="/logo.png" alt="logo" className="h-16 md:h-full w-full object-contain p-0 m-0" />
         </div>
 
         {/* Right Column (3/4): Hero Image & Search */}
@@ -231,7 +231,7 @@ export const HomePage: React.FC = () => {
           <div className="container relative z-10 mx-auto px-4 lg:px-6 py-4 lg:py-6 flex flex-col items-center justify-center">
             
             {/* Text enclosed in a navy blue box */}
-            <div className="bg-dark/80 backdrop-blur-sm p-6 rounded-2xl mb-6 text-center max-w-2xl w-full shadow-2xl border border-white/10">
+            <div className="bg-dark/80 backdrop-blur-sm p-4 md:p-6 rounded-xl md:rounded-2xl mb-4 md:mb-6 text-center max-w-2xl w-full shadow-2xl border border-white/10">
               <h1 className="text-xl lg:text-3xl font-bold text-white mb-2">
                 Welcome to <span className="text-primary">Comfort & Convenience</span>
               </h1>
@@ -441,12 +441,12 @@ export const HomePage: React.FC = () => {
         )}
 
         {/* Project Count */}
-        <div className="flex justify-between items-end mb-10 pb-4 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-6 md:mb-10 pb-4 border-b border-slate-200 gap-2">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1 md:mb-2">
               Our Projects
             </h2>
-            <p className="text-slate-500">
+            <p className="text-slate-500 text-sm md:text-base">
               Showing {projectGroups.length} distinct properties
             </p>
           </div>
@@ -464,7 +464,7 @@ export const HomePage: React.FC = () => {
             </Button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
             {projectGroups.map((group) => (
               <ProjectGroupCard key={group.id} group={group} />
             ))}
@@ -472,75 +472,75 @@ export const HomePage: React.FC = () => {
         )}
 
         {/* Statistics Section */}
-        <section className="mt-24 pt-12 border-t border-slate-200">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
-              <Building2 className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+        <section className="mt-12 md:mt-24 pt-8 md:pt-12 border-t border-slate-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="bg-white shadow-sm p-4 md:p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Building2 className="mx-auto text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform w-8 h-8 md:w-10 md:h-10" />
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
                 <AnimatedCounter end={10} suffix="+" />
               </h3>
-              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Projects</p>
+              <p className="text-slate-500 text-[10px] md:text-sm font-semibold tracking-wider uppercase">Projects</p>
             </div>
-            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
-              <HomeIcon className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+            <div className="bg-white shadow-sm p-4 md:p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <HomeIcon className="mx-auto text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform w-8 h-8 md:w-10 md:h-10" />
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
                 <AnimatedCounter end={125} suffix="+" />
               </h3>
-              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Properties</p>
+              <p className="text-slate-500 text-[10px] md:text-sm font-semibold tracking-wider uppercase">Properties</p>
             </div>
-            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
-              <Users className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+            <div className="bg-white shadow-sm p-4 md:p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Users className="mx-auto text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform w-8 h-8 md:w-10 md:h-10" />
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
                 <AnimatedCounter end={1000} suffix="+" />
               </h3>
-              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Tenants</p>
+              <p className="text-slate-500 text-[10px] md:text-sm font-semibold tracking-wider uppercase">Tenants</p>
             </div>
-            <div className="bg-white shadow-sm p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
-              <Clock className="mx-auto text-primary mb-4 group-hover:scale-110 transition-transform" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900 mb-1">
+            <div className="bg-white shadow-sm p-4 md:p-6 rounded-2xl text-center border border-slate-200 hover:border-primary/50 transition-colors group">
+              <Clock className="mx-auto text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform w-8 h-8 md:w-10 md:h-10" />
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
                 <AnimatedCounter end={18} suffix="+" />
               </h3>
-              <p className="text-slate-500 text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
+              <p className="text-slate-500 text-[10px] md:text-sm font-semibold tracking-wider uppercase">Years of Experience</p>
             </div>
           </div>
         </section>
 
         {/* Why Choose SK Buildings Section */}
-        <section className="mt-24 space-y-12 pb-16">
+        <section className="mt-12 md:mt-24 space-y-8 md:space-y-12 pb-8 md:pb-16">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4 font-serif">Why Choose <span className="brand-text text-slate-900">SK Buildings</span>?</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 md:mb-4 font-serif">Why Choose <span className="brand-text text-slate-900">SK Buildings</span>?</h2>
+            <p className="text-slate-600 text-sm md:text-base max-w-2xl mx-auto">
               We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
-                <ShieldCheck className="text-primary" size={40} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="text-center space-y-3 md:space-y-4 bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center">
+                <ShieldCheck className="text-primary w-8 h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Uncompromised Security</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <h3 className="text-lg md:text-xl font-bold text-slate-900">Uncompromised Security</h3>
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                 Our properties are equipped with 24/7 security, modern surveillance systems, and safe access protocols to ensure you and your family always feel secure.
               </p>
             </div>
             
-            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
-                <Award className="text-primary" size={40} />
+            <div className="text-center space-y-3 md:space-y-4 bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center">
+                <Award className="text-primary w-8 h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Premium Quality</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <h3 className="text-lg md:text-xl font-bold text-slate-900">Premium Quality</h3>
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                 From the foundation to the finishing touches, we use only the highest quality materials and partner with expert architects to build structures that last generations.
               </p>
             </div>
 
-            <div className="text-center space-y-4 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <div className="bg-primary/10 w-20 h-20 mx-auto rounded-full flex items-center justify-center">
-                <HeartHandshake className="text-primary" size={40} />
+            <div className="text-center space-y-3 md:space-y-4 bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm">
+              <div className="bg-primary/10 w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center">
+                <HeartHandshake className="text-primary w-8 h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Tenant-First Approach</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <h3 className="text-lg md:text-xl font-bold text-slate-900">Tenant-First Approach</h3>
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                 We believe in treating our tenants like family. Our dedicated maintenance team is always on standby to resolve issues quickly and efficiently.
               </p>
             </div>

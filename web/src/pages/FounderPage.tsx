@@ -55,14 +55,14 @@ export const FounderPage: React.FC = () => {
         schema={personSchema}
         url="https://skbuildings.in/founder"
       />
-      <div className="min-h-screen bg-dark py-24 px-4 sm:px-8">
+      <div className="min-h-screen bg-dark py-12 md:py-24 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#d4af37] font-serif">Meet Our Founder</h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] font-serif">Meet Our Founder</h1>
             <p className="text-grey-light text-lg">The vision and leadership behind <span className="brand-text">SK Buildings</span>.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-dark-lighter to-dark p-8 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-12 items-start shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-br from-dark-lighter to-dark p-6 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-6 md:gap-12 items-start shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
             
             <div className="w-full md:w-1/3 flex flex-col items-center space-y-6 z-10">
@@ -91,7 +91,7 @@ export const FounderPage: React.FC = () => {
 
             <div className="w-full md:w-2/3 space-y-6 z-10">
               <div>
-                <h2 className="text-4xl font-bold text-white font-serif mb-2">{mainFounder.name}</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-white font-serif mb-2">{mainFounder.name}</h2>
                 <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-lg">{mainFounder.role}</p>
               </div>
               
@@ -102,7 +102,7 @@ export const FounderPage: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Biography & Experience</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Biography & Experience</h3>
                 <p className="text-grey-light leading-relaxed whitespace-pre-wrap text-lg">
                   {mainFounder.qualification}
                 </p>

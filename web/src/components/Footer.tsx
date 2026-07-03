@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
   return (
     <>
-      <footer className="bg-[#1c1a17] text-gray-300 py-16 px-8 lg:px-16 border-t border-[#d4af37]/20 relative z-10 overflow-hidden">
+      <footer className="bg-[#1c1a17] text-gray-300 py-12 md:py-16 px-6 md:px-8 lg:px-16 border-t border-[#d4af37]/20 relative z-10 overflow-hidden">
         {/* Background Image Overlay (Subtle) */}
         <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 pointer-events-none">
           <img src="/logo.png" alt="Background Element" className="w-full h-full object-cover object-left" />
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
       {/* Floating Enquire Now Section */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center">
         {showEnquiry && (
-          <div className="bg-white shadow-2xl rounded-l-xl p-6 border-y border-l border-[#d4af37]/30 mr-0 w-72 relative">
+          <div className="bg-white shadow-2xl rounded-l-xl p-4 md:p-6 border-y border-l border-[#d4af37]/30 mr-0 w-64 md:w-72 relative">
             <button 
               onClick={() => setShowEnquiry(false)}
               className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
         )}
         <button 
           onClick={() => setShowEnquiry(!showEnquiry)}
-          className="bg-[#a88c3a] hover:bg-[#d4af37] text-white py-4 px-2 font-semibold tracking-wider text-sm shadow-lg transition-colors rounded-l-md cursor-pointer" 
+          className="bg-[#a88c3a] hover:bg-[#d4af37] text-white py-3 px-1.5 md:py-4 md:px-2 font-semibold tracking-wider text-xs md:text-sm shadow-lg transition-colors rounded-l-md cursor-pointer" 
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
           Enquire Now

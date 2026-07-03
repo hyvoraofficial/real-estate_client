@@ -55,7 +55,7 @@ export const ProjectPropertiesPage: React.FC = () => {
         <div className="container mx-auto px-4 py-8">
         
         {/* Header */}
-        <div className="mb-10">
+        <div className="mb-6 md:mb-10">
           <button 
             onClick={() => navigate(-1)}
             className="flex items-center text-slate-400 hover:text-primary transition-colors mb-4 group"
@@ -64,7 +64,7 @@ export const ProjectPropertiesPage: React.FC = () => {
             Back to Projects
           </button>
           
-          <h1 className="text-4xl font-bold text-white mb-2">
+          <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">
             {projectName} <span className="text-primary font-normal">| {titleType}</span>
           </h1>
           <p className="text-slate-500">
@@ -82,7 +82,7 @@ export const ProjectPropertiesPage: React.FC = () => {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
             {properties.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}

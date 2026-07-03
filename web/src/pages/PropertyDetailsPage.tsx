@@ -83,8 +83,8 @@ export const PropertyDetailsPage: React.FC = () => {
   const contactPhone = '9110443387'; // Replace with actual admin phone
 
   return (
-    <div className="min-h-screen bg-dark pb-12">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-dark pb-8 md:pb-12">
+      <div className="container mx-auto px-4 py-6 md:py-8">
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
@@ -98,7 +98,7 @@ export const PropertyDetailsPage: React.FC = () => {
           <div className="lg:col-span-2 space-y-6">
             {/* Main Image */}
             <div className="bg-dark-light rounded-lg overflow-hidden">
-              <div className="relative h-96">
+              <div className="relative h-56 sm:h-72 md:h-96">
                 {property.images && property.images.length > 0 ? (
                   <img
                     src={property.images[selectedImage]}
@@ -133,7 +133,7 @@ export const PropertyDetailsPage: React.FC = () => {
                       key={index}
                       src={image}
                       alt={`${property.title} ${index + 1}`}
-                      className={`w-20 h-20 object-cover rounded cursor-pointer transition-all ${
+                      className={`w-16 h-16 md:w-20 md:h-20 object-cover rounded cursor-pointer transition-all ${
                         selectedImage === index ? 'ring-2 ring-primary' : 'opacity-60 hover:opacity-100'
                       }`}
                       onClick={() => setSelectedImage(index)}
@@ -145,9 +145,9 @@ export const PropertyDetailsPage: React.FC = () => {
 
             {/* Property Details */}
             <div className="card">
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                 <div>
-                  <h1 className="text-3xl font-bold text-white mb-2">{property.title}</h1>
+                  <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{property.title}</h1>
                   <div className="flex items-center text-grey-light mb-2">
                     <MapPin size={18} className="mr-2 text-primary" />
                     {property.project?.map_lat && property.project?.map_lng ? (
@@ -165,15 +165,15 @@ export const PropertyDetailsPage: React.FC = () => {
                   </div>
                   <p className="text-sm text-grey">Project: {property.projectName}</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-primary text-4xl font-bold">{getPropertyPriceDisplay(property)}</p>
+                <div className="text-left md:text-right">
+                  <p className="text-primary text-2xl md:text-4xl font-bold">{getPropertyPriceDisplay(property)}</p>
                   <p className="text-grey-light text-sm mt-1">
                     {property.type === 'flat' ? 'Flat' : 'Shop'}
                   </p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4 border-t border-grey-dark">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 py-3 md:py-4 border-t border-grey-dark">
                 {property.type === 'shop' && property.area > 0 && (
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-2">
@@ -243,7 +243,7 @@ export const PropertyDetailsPage: React.FC = () => {
                     {property.amenities.map((amenity, index) => (
                       <span
                         key={index}
-                        className="bg-dark-lighter px-4 py-2 rounded-full text-primary text-sm"
+                        className="bg-dark-lighter px-3 py-1.5 md:px-4 md:py-2 rounded-full text-primary text-xs md:text-sm"
                       >
                         {amenity}
                       </span>
