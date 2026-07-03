@@ -41,16 +41,16 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-dark-light border-b border-primary/30 sticky top-0 z-[999] backdrop-blur-sm">
-      <div className="w-full pl-4 md:pl-0 pr-4 md:pr-8 relative">
-        <div className="flex items-center justify-between h-14 md:h-16">
+      <div className="w-full pl-4 lg:pl-0 pr-4 lg:pr-8 relative">
+        <div className="flex items-center justify-between h-14 lg:h-16">
           
           {/* Left Side: Hamburger Menu & Company Name */}
-          <div className="flex items-center md:w-1/4 md:justify-center space-x-4">
+          <div className="flex items-center lg:w-1/4 lg:justify-center space-x-4">
             {/* Hamburger Menu Button */}
             {!isAdminRoute && (
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="hidden md:block text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
+                className="hidden lg:block text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
                 title="Menu"
               >
                 <Menu size={24} />
@@ -60,16 +60,16 @@ export const Navbar: React.FC = () => {
             {/* Company Name / Logo Box */}
             <Link 
               to="/" 
-              className="flex items-center bg-white p-0 shadow-lg border-x border-b border-slate-200 rounded-b-xl h-24 w-20 z-50 translate-y-[12px] md:bg-transparent md:p-0 md:shadow-none md:border-none md:rounded-none md:h-auto md:w-auto md:translate-y-0"
+              className="flex items-center bg-white p-0 shadow-lg border-x border-b border-slate-200 rounded-b-xl h-24 w-20 md:h-28 md:w-24 z-50 translate-y-[12px] lg:bg-transparent lg:p-0 lg:shadow-none lg:border-none lg:rounded-none lg:h-auto lg:w-auto lg:translate-y-0"
             >
-              <img src="/logo.png" alt="SK Buildings Logo" className="h-full w-full object-contain md:hidden" />
-              <span className="hidden md:inline text-xl md:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
+              <img src="/logo.png" alt="SK Buildings Logo" className="h-full w-full object-contain lg:hidden" />
+              <span className="hidden lg:inline text-xl lg:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
             </Link>
           </div>
 
           {/* Navigation Links */}
           {!isAdminRoute && (
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
@@ -89,11 +89,11 @@ export const Navbar: React.FC = () => {
 
           {/* User Section */}
           <div className="flex items-center space-x-4">
-            {/* Hamburger Menu Button (Mobile only) */}
+            {/* Hamburger Menu Button (Mobile/Tablet only) */}
             {!isAdminRoute && (
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
+                className="lg:hidden text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
                 title="Menu"
               >
                 <Menu size={24} />
@@ -102,7 +102,7 @@ export const Navbar: React.FC = () => {
 
             {isAuthenticated && user?.role !== 'admin' ? (
               <>
-                <div className="hidden md:block text-right">
+                <div className="hidden lg:block text-right">
                   <p className="text-white font-semibold">{user?.name}</p>
                   <p className="text-grey text-sm">{user?.phone}</p>
                 </div>
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
                   title="Logout"
                 >
                   <LogOut size={20} />
-                  <span className="hidden md:inline">Logout</span>
+                  <span className="hidden lg:inline">Logout</span>
                 </button>
               </>
             ) : !isAdminRoute ? (
@@ -127,7 +127,7 @@ export const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div 
             ref={menuRef}
-            className="absolute top-14 md:top-16 right-4 md:left-4 md:right-auto w-64 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2"
+            className="absolute top-14 lg:top-16 right-4 lg:left-4 lg:right-auto w-64 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2"
           >
             <div className="p-2">
               <button 
@@ -157,8 +157,8 @@ export const Navbar: React.FC = () => {
                 )}
               </button>
 
-              {/* Mobile Only: Standard Nav Links */}
-              <div className="md:hidden mt-2 pt-2 border-t border-slate-100">
+              {/* Mobile/Tablet Only: Standard Nav Links */}
+              <div className="lg:hidden mt-2 pt-2 border-t border-slate-100">
                 {navLinks.map((link) => (
                   <Link
                     key={link.to}

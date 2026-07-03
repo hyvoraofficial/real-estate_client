@@ -210,15 +210,15 @@ export const HomePage: React.FC = () => {
       <SEO schema={orgSchema} />
       <div className="min-h-screen bg-dark">
       {/* Split Hero Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
+      <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
         
         {/* Left Column (1/4): Logo */}
-        <div className="hidden md:flex md:col-span-1 bg-white items-center justify-center p-0 m-0 md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
+        <div className="hidden lg:flex lg:col-span-1 bg-white items-center justify-center p-0 m-0 lg:border-b-0 lg:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
           <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" />
         </div>
 
         {/* Right Column (3/4): Hero Image & Search */}
-        <div className="md:col-span-3 relative flex items-center justify-center overflow-hidden">
+        <div className="lg:col-span-3 relative flex items-center justify-center overflow-hidden">
           {/* Background Image with Overlay */}
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
