@@ -213,8 +213,8 @@ export const HomePage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
         
         {/* Left Column (1/4): Logo */}
-        <div className="md:col-span-1 bg-white flex items-center justify-center p-2 md:p-0 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-24 md:h-full">
-          <img src="/logo.png" alt="logo" className="h-16 md:h-full w-full object-contain p-0 m-0" />
+        <div className="md:col-span-1 bg-white flex items-center justify-center p-2 md:p-0 m-0 border-b md:border-b-0 md:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-28 md:h-full">
+          <img src="/logo.png" alt="logo" className="h-20 md:h-full w-auto object-contain p-0 m-0" />
         </div>
 
         {/* Right Column (3/4): Hero Image & Search */}

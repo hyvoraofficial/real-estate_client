@@ -59,6 +59,7 @@ export const Navbar: React.FC = () => {
 
             {/* Company Name */}
             <Link to="/" className="flex items-center">
+              <img src="/logo-without_name.png" alt="SK Buildings Logo" className="h-8 w-8 md:hidden object-contain mr-2" />
               <span className="text-xl md:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
             </Link>
           </div>
