@@ -22,9 +22,10 @@ export interface ProjectGroup {
 
 interface ProjectGroupCardProps {
   group: ProjectGroup;
+  loadingPriority?: 'eager' | 'lazy';
 }
 
-export const ProjectGroupCard: React.FC<ProjectGroupCardProps> = ({ group }) => {
+export const ProjectGroupCard: React.FC<ProjectGroupCardProps> = ({ group, loadingPriority = 'lazy' }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -42,6 +43,9 @@ export const ProjectGroupCard: React.FC<ProjectGroupCardProps> = ({ group }) => 
           <img
             src={group.image}
             alt={group.projectName}
+            loading={loadingPriority}
+            width={400}
+            height={224}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
           />
         ) : (

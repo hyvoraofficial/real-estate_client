@@ -11,7 +11,17 @@ export const Footer: React.FC = () => {
       <footer className="bg-[#1c1a17] text-gray-300 py-12 md:py-16 px-6 md:px-8 lg:px-16 border-t border-[#d4af37]/20 relative z-10 overflow-hidden">
         {/* Background Image Overlay (Subtle) */}
         <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 pointer-events-none">
-          <img src="/logo.png" alt="Background Element" className="w-full h-full object-cover object-left" />
+          <picture className="w-full h-full">
+            <source srcSet="/logo.webp" type="image/webp" />
+            <img 
+              src="/logo.png" 
+              alt="Background Element" 
+              className="w-full h-full object-cover object-left" 
+              loading="lazy"
+              width={870}
+              height={804}
+            />
+          </picture>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">

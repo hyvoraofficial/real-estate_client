@@ -6,9 +6,10 @@ import { useNavigate } from 'react-router-dom';
 
 interface PropertyCardProps {
   property: Property;
+  loadingPriority?: 'eager' | 'lazy';
 }
 
-export const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
+export const PropertyCard: React.FC<PropertyCardProps> = ({ property, loadingPriority = 'lazy' }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -26,6 +27,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <img
             src={property.images[0]}
             alt={property.title}
+            loading={loadingPriority}
+            width={400}
+            height={224}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
           />
         ) : (

@@ -12,7 +12,10 @@ app.use(cors());
 app.use(express.json());
 
 // Serve uploaded files
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static("uploads", {
+  maxAge: "1y",
+  immutable: true
+}));
 
 /* =========================
    PUBLIC ROUTES (NO AUTH)

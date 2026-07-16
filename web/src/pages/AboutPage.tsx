@@ -98,8 +98,13 @@ export const AboutPage: React.FC = () => {
 
         {/* 4. Founder Section */}
         {isLoading ? (
-          <div className="flex justify-center p-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#d4af37]"></div>
+          <div className="bg-gradient-to-br from-dark-lighter to-dark p-6 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-6 md:gap-12 items-center animate-pulse">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-200" />
+            <div className="flex-1 space-y-4">
+              <div className="h-8 bg-slate-200 rounded w-1/3 mx-auto md:mx-0" />
+              <div className="h-4 bg-slate-200 rounded w-1/4 mx-auto md:mx-0" />
+              <div className="h-20 bg-slate-200 rounded w-full" />
+            </div>
           </div>
         ) : founders.length > 0 ? (
           <div className="space-y-6 md:space-y-12">
@@ -107,7 +112,14 @@ export const AboutPage: React.FC = () => {
               <section key={founder.id || index} className="bg-gradient-to-br from-dark-lighter to-dark p-6 md:p-12 rounded-2xl border border-[#d4af37]/30 flex flex-col md:flex-row gap-6 md:gap-12 items-center">
                 <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full overflow-hidden border-4 border-[#d4af37] shadow-[0_0_30px_rgba(212,175,55,0.2)]">
                   {founder.image_url ? (
-                    <img src={founder.image_url} alt={founder.name} className="w-full h-full object-cover" />
+                    <img 
+                      src={founder.image_url} 
+                      alt={founder.name} 
+                      loading="lazy"
+                      width={256}
+                      height={256}
+                      className="w-full h-full object-cover" 
+                    />
                   ) : (
                     <div className="w-full h-full bg-grey-dark flex items-center justify-center">
                       <Users className="text-grey-light w-16 h-16 md:w-20 md:h-20" />

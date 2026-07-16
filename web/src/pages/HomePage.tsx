@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ProjectGroupCard } from '../components/ProjectGroupCard';
 import type { ProjectGroup } from '../components/ProjectGroupCard';
-import { Loading } from '../components/Loading';
 import { Button } from '../components/Button';
 import { propertyService } from '../services/property.service';
 import { bookingService } from '../services/booking.service';
@@ -181,9 +180,6 @@ export const HomePage: React.FC = () => {
     });
   }, [filteredProperties]);
 
-  if (isLoading) {
-    return <Loading fullScreen />;
-  }
 
   const orgSchema = {
     "@context": "https://schema.org",
@@ -214,16 +210,27 @@ export const HomePage: React.FC = () => {
 
           {/* Left Column (1/4): Logo */}
           <div className="hidden lg:flex lg:col-span-1 bg-white items-center justify-center p-0 m-0 lg:border-b-0 lg:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
-            <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" />
+            <picture className="w-full h-full flex items-center justify-center">
+              <source srcSet="/logo.webp" type="image/webp" />
+              <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" width={870} height={804} />
+            </picture>
           </div>
 
           {/* Right Column (3/4): Hero Image & Search */}
           <div className="lg:col-span-3 relative flex items-center justify-center overflow-hidden">
             {/* Background Image with Overlay */}
-            <div
-              className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/hero_bg.png')" }}
-            >
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <picture className="w-full h-full">
+                <source srcSet="/hero_bg.webp" type="image/webp" />
+                <img 
+                  src="/hero_bg.png" 
+                  alt="Hero background" 
+                  className="w-full h-full object-cover" 
+                  fetchPriority="high" 
+                  width={1024} 
+                  height={1024} 
+                />
+              </picture>
               {/* Subtle Gradient Overlay to ensure minimum readability without darkening too much */}
               <div className="absolute inset-0 bg-gradient-to-r from-dark/30 to-transparent"></div>
             </div>
@@ -446,12 +453,30 @@ export const HomePage: React.FC = () => {
                 Our Projects
               </h2>
               <p className="text-slate-500 text-sm md:text-base">
-                Showing {projectGroups.length} distinct properties
+                {isLoading ? "Loading properties..." : `Showing ${projectGroups.length} distinct properties`}
               </p>
             </div>
           </div>
 
-          {projectGroups.length === 0 ? (
+          {isLoading ? (
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col h-[280px] sm:h-[350px] md:h-[420px]">
+                  {/* Image Placeholder */}
+                  <div className="relative h-32 sm:h-44 md:h-56 bg-slate-200 animate-pulse" />
+                  {/* Content Placeholder */}
+                  <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="h-6 bg-slate-200 rounded w-3/4 mb-2 animate-pulse" />
+                      <div className="h-4 bg-slate-200 rounded w-1/2 mb-4 animate-pulse" />
+                      <div className="h-8 bg-slate-200 rounded w-full mb-4 animate-pulse" />
+                    </div>
+                    <div className="h-6 bg-slate-200 rounded w-1/2 mt-auto animate-pulse" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : projectGroups.length === 0 ? (
             <div className="text-center py-24 bg-slate-50 rounded-3xl border border-slate-100">
               <Building2 size={64} className="mx-auto text-slate-300 mb-6" />
               <h3 className="text-2xl font-bold text-slate-800 mb-3">No Projects Found</h3>
@@ -464,8 +489,8 @@ export const HomePage: React.FC = () => {
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
-              {projectGroups.map((group) => (
-                <ProjectGroupCard key={group.id} group={group} />
+              {projectGroups.map((group, index) => (
+                <ProjectGroupCard key={group.id} group={group} loadingPriority={index < 4 ? "eager" : "lazy"} />
               ))}
             </div>
           )}

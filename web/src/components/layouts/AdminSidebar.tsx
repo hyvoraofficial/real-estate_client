@@ -37,7 +37,10 @@ export const AdminSidebar: React.FC = () => {
     <div className="w-64 bg-dark-light border-r border-primary/20 flex flex-col h-screen sticky top-0">
       {/* Logo Area */}
       <div className="py-8 flex items-center justify-center border-b border-primary/20">
-        <img src="/logo.png" alt="logo" className="w-48 h-auto object-contain drop-shadow-lg" />
+        <picture className="w-48 flex items-center justify-center">
+          <source srcSet="/logo.webp" type="image/webp" />
+          <img src="/logo.png" alt="logo" className="w-48 h-auto object-contain drop-shadow-lg" width={192} height={177} />
+        </picture>
       </div>
 
       {/* Navigation */}

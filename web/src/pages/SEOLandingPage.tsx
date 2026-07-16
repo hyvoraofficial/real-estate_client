@@ -4,7 +4,6 @@ import { ProjectGroupCard } from '../components/ProjectGroupCard';
 import type { ProjectGroup } from '../components/ProjectGroupCard';
 import { propertyService } from '../services/property.service';
 import type { Property } from '../types';
-import { Loading } from '../components/Loading';
 import { SEO } from '../components/SEO';
 
 const SEO_CONFIGS: Record<string, { title: string, h1: string, description: string, typeFilter: string[], keywords: string }> = {
@@ -170,11 +169,27 @@ export const SEOLandingPage: React.FC = () => {
           </div>
 
           {isLoading ? (
-            <Loading />
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col h-[280px] sm:h-[350px] md:h-[420px]">
+                  {/* Image Placeholder */}
+                  <div className="relative h-32 sm:h-44 md:h-56 bg-slate-200 animate-pulse" />
+                  {/* Content Placeholder */}
+                  <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="h-6 bg-slate-200 rounded w-3/4 mb-2 animate-pulse" />
+                      <div className="h-4 bg-slate-200 rounded w-1/2 mb-4 animate-pulse" />
+                      <div className="h-8 bg-slate-200 rounded w-full mb-4 animate-pulse" />
+                    </div>
+                    <div className="h-6 bg-slate-200 rounded w-1/2 mt-auto animate-pulse" />
+                  </div>
+                </div>
+              ))}
+            </div>
           ) : projectGroups.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-              {projectGroups.map((group) => (
-                <ProjectGroupCard key={`${group.projectName}-${group.type}`} group={group} />
+              {projectGroups.map((group, index) => (
+                <ProjectGroupCard key={`${group.projectName}-${group.type}`} group={group} loadingPriority={index < 4 ? "eager" : "lazy"} />
               ))}
             </div>
           ) : (

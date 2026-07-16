@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { propertyService } from '../services/property.service';
 import type { Property } from '../types';
-import { Loading } from '../components/Loading';
 import { Button } from '../components/Button';
 import { getPropertyPriceDisplay, getWhatsAppLink, getCallLink, formatCurrency } from '../utils/helpers';
 import { MapPin, Square, Bed, Bath, Phone, MessageCircle, Calendar, IndianRupee, Users } from 'lucide-react';
@@ -73,7 +72,33 @@ export const PropertyDetailsPage: React.FC = () => {
   };
 
   if (isLoading) {
-    return <Loading fullScreen />;
+    return (
+      <div className="min-h-screen bg-dark pb-8 md:pb-12 animate-pulse">
+        <div className="container mx-auto px-4 py-6 md:py-8">
+          <div className="h-6 bg-slate-800 rounded w-32 mb-6" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-6">
+              <div className="bg-slate-800 rounded-lg overflow-hidden h-56 sm:h-72 md:h-96" />
+              <div className="bg-[#1e293b]/50 p-6 rounded-lg space-y-4">
+                <div className="h-8 bg-slate-800 rounded w-3/4" />
+                <div className="h-4 bg-slate-800 rounded w-1/4" />
+                <div className="h-20 bg-slate-800 rounded w-full" />
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <div className="bg-[#1e293b]/50 p-6 rounded-xl border border-slate-700/50 space-y-6">
+                <div className="h-6 bg-slate-800 rounded w-1/2" />
+                <div className="h-10 bg-slate-800 rounded w-full" />
+                <div className="h-10 bg-slate-800 rounded w-full" />
+                <div className="h-12 bg-slate-800 rounded w-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (!property) {
@@ -103,6 +128,10 @@ export const PropertyDetailsPage: React.FC = () => {
                   <img
                     src={property.images[selectedImage]}
                     alt={property.title}
+                    loading="eager"
+                    fetchPriority="high"
+                    width={800}
+                    height={384}
                     className="w-full h-full object-cover"
                   />
                 ) : (
@@ -133,6 +162,9 @@ export const PropertyDetailsPage: React.FC = () => {
                       key={index}
                       src={image}
                       alt={`${property.title} ${index + 1}`}
+                      loading="lazy"
+                      width={80}
+                      height={80}
                       className={`w-16 h-16 md:w-20 md:h-20 object-cover rounded cursor-pointer transition-all ${
                         selectedImage === index ? 'ring-2 ring-primary' : 'opacity-60 hover:opacity-100'
                       }`}
