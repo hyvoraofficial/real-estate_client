@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Building, 
-  Home, 
-  Users, 
-  FileBarChart, 
+import {
+  LayoutDashboard,
+  Building,
+  Home,
+  Users,
+  FileBarChart,
   Settings,
   LogOut,
   Calculator
@@ -44,18 +44,17 @@ export const AdminSidebar: React.FC = () => {
       <nav className="flex-1 overflow-y-auto py-4">
         <ul className="space-y-1 px-3">
           {navItems.map((item) => {
-            const isActive = item.path === '/admin' 
-              ? location.pathname === '/admin' 
+            const isActive = item.path === '/admin'
+              ? location.pathname === '/admin'
               : location.pathname.startsWith(item.path);
             return (
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
-                    isActive
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${isActive
                       ? 'bg-primary text-dark font-semibold'
                       : 'text-grey-light hover:text-white hover:bg-dark-lighter'
-                  }`}
+                    }`}
                 >
                   <item.icon size={20} />
                   {item.name}

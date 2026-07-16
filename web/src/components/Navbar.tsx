@@ -43,12 +43,12 @@ export const Navbar: React.FC = () => {
     <nav className="bg-dark-light border-b border-primary/30 sticky top-0 z-[999] backdrop-blur-sm">
       <div className="w-full pl-4 lg:pl-0 pr-4 lg:pr-8 relative">
         <div className="flex items-center justify-between h-14 lg:h-16">
-          
+
           {/* Left Side: Hamburger Menu & Company Name */}
           <div className="flex items-center lg:w-1/4 lg:justify-center space-x-4">
             {/* Hamburger Menu Button */}
             {!isAdminRoute && (
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="hidden lg:block text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
                 title="Menu"
@@ -58,8 +58,8 @@ export const Navbar: React.FC = () => {
             )}
 
             {/* Company Name / Logo Box */}
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center bg-white p-0 shadow-lg border-x border-b border-slate-200 rounded-b-xl h-24 w-20 md:h-28 md:w-24 z-50 translate-y-[12px] lg:bg-transparent lg:p-0 lg:shadow-none lg:border-none lg:rounded-none lg:h-auto lg:w-auto lg:translate-y-0"
             >
               <img src="/logo.png" alt="SK Buildings Logo" className="h-full w-full object-contain lg:hidden" />
@@ -74,11 +74,10 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all ${
-                    isActive(link.to)
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all ${isActive(link.to)
                       ? 'bg-primary text-dark font-semibold'
                       : 'text-grey-light hover:text-white hover:bg-dark-lighter'
-                  }`}
+                    }`}
                 >
                   <link.icon size={20} />
                   <span>{link.label}</span>
@@ -91,7 +90,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center space-x-4">
             {/* Hamburger Menu Button (Mobile/Tablet only) */}
             {!isAdminRoute && (
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="lg:hidden text-white hover:text-primary transition-colors p-1 rounded-lg hover:bg-dark"
                 title="Menu"
@@ -125,12 +124,12 @@ export const Navbar: React.FC = () => {
 
         {/* Dropdown Menu */}
         {isMenuOpen && (
-          <div 
+          <div
             ref={menuRef}
             className="absolute top-14 lg:top-16 right-4 lg:left-4 lg:right-auto w-64 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2"
           >
             <div className="p-2">
-              <button 
+              <button
                 onClick={handleTenantClick}
                 className="w-full flex items-center space-x-3 px-4 py-3 text-left rounded-lg hover:bg-slate-50 transition-colors group"
               >

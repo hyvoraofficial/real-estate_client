@@ -15,11 +15,11 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-          
+
           {/* Column 1: Reach Us */}
           <div className="space-y-6">
             <h3 className="text-[#d4af37] text-xl font-serif mb-4">Reach Us</h3>
-            
+
             <div>
               <p className="font-bold text-gray-200 mb-1">Corporate Address:</p>
               <p className="text-sm leading-relaxed text-gray-400">
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                 Bengaluru 560066
               </p>
             </div>
-            
+
             <div>
               <p className="font-bold text-gray-200 mb-1">For enquiries:</p>
               <p className="text-sm font-semibold">9110443387</p>
@@ -81,14 +81,14 @@ export const Footer: React.FC = () => {
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center">
         {showEnquiry && (
           <div className="bg-white shadow-2xl rounded-l-xl p-4 md:p-6 border-y border-l border-[#d4af37]/30 mr-0 w-64 md:w-72 relative">
-            <button 
+            <button
               onClick={() => setShowEnquiry(false)}
               className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
             >
               <X size={18} />
             </button>
             <h4 className="text-xl font-bold text-[#1c1a17] mb-5 border-b pb-2">Contact Us</h4>
-            
+
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <a href="mailto:info@skbuildings.com" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
                   <a href="mailto:info@skbuildings.com" className="text-sm font-medium text-gray-800 hover:text-[#d4af37]">info@skbuildings.com</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <a href="tel:9110443387" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
                   <Phone size={20} />
@@ -112,9 +112,9 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         )}
-        <button 
+        <button
           onClick={() => setShowEnquiry(!showEnquiry)}
-          className="bg-[#a88c3a] hover:bg-[#d4af37] text-white py-3 px-1.5 md:py-4 md:px-2 font-semibold tracking-wider text-xs md:text-sm shadow-lg transition-colors rounded-l-md cursor-pointer" 
+          className="bg-[#a88c3a] hover:bg-[#d4af37] text-white py-3 px-1.5 md:py-4 md:px-2 font-semibold tracking-wider text-xs md:text-sm shadow-lg transition-colors rounded-l-md cursor-pointer"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
           Enquire Now
