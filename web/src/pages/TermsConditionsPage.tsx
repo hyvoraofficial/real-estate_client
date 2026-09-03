@@ -15,7 +15,7 @@ export const TermsConditionsPage: React.FC = () => {
       <section className="bg-dark-lighter p-6 md:p-8 rounded-2xl border border-grey-dark">
         <h2 className="text-2xl font-bold text-white mb-4">2. Intellectual Property</h2>
         <p className="leading-relaxed mb-4">
-          The service and its original content, features, and functionality are and will remain the exclusive property of SK Buildings and its licensors.
+          The service and its original content, features, and functionality are and will remain the exclusive property of HYVORA and its licensors.
         </p>
       </section>
 

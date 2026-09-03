@@ -43,9 +43,9 @@ export const ProjectPropertiesPage: React.FC = () => {
   return (
     <>
       <SEO 
-        title={`${projectName} - ${titleType} | SK Buildings`}
-        description={`Explore available ${titleType.toLowerCase()} at ${projectName} by SK Buildings.`}
-        url={`https://skbuildings.in/projects/${encodeURIComponent(projectName || '')}/${encodeURIComponent(type || '')}`}
+        title={`${projectName} - ${titleType} | HYVORA Property Management`}
+        description={`Explore available ${titleType.toLowerCase()} at ${projectName} managed by HYVORA Property Management.`}
+        url={`https://hyvorademo.in/projects/${encodeURIComponent(projectName || '')}/${encodeURIComponent(type || '')}`}
       />
       <div className="min-h-screen bg-dark">
         <div className="container mx-auto px-4 py-8">

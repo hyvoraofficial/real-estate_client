@@ -114,6 +114,43 @@ export const LoginPage: React.FC = () => {
         {/* Phone Number Step */}
         {step === 'phone' && (
           <div className="space-y-4">
+            {/* Demo Quick Access */}
+            <div className="bg-primary/10 border border-primary/20 p-3.5 rounded-xl text-left space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold text-primary uppercase tracking-wider">Demo Tenant Account</span>
+                <span className="text-[9px] bg-primary/20 text-primary px-2 py-0.5 rounded font-semibold">HYVORA DEMO</span>
+              </div>
+              <p className="text-xs text-gray-300">
+                Test the tenant portal experience (view demo lease, rent receipts, maintenance tickets).
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  const demoTenant: any = {
+                    id: 'demo-tenant-rahul',
+                    name: 'Rahul Sharma',
+                    phone: '9876543210',
+                    email: 'rahul.sharma@demo.hyvora.in',
+                    role: 'tenant',
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
+                  };
+                  login('hyvora-demo-tenant-token', demoTenant);
+                  toast.success('Logged in as Rahul Sharma (Demo Tenant)');
+                  navigate('/dashboard');
+                }}
+                className="w-full bg-primary/20 hover:bg-primary/30 text-primary border border-primary/40 font-semibold py-2 px-3 rounded-lg text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <span>⚡ Instant Tenant Demo Access (Rahul Sharma)</span>
+              </button>
+            </div>
+
+            <div className="relative flex py-1 items-center w-full">
+              <div className="flex-grow border-t border-gray-700"></div>
+              <span className="flex-shrink mx-3 text-gray-500 text-[11px] uppercase tracking-wider">or sign in with phone</span>
+              <div className="flex-grow border-t border-gray-700"></div>
+            </div>
+
             <Input
               type="tel"
               placeholder="Enter 10-digit phone number"

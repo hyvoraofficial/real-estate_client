@@ -1,4 +1,4 @@
--- SK Buildings Database Schema
+-- HYVORA Property Management Database Schema
 -- Run this in Supabase SQL Editor
 
 -- 1. Admin Table

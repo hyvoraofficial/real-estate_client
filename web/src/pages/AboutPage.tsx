@@ -34,17 +34,17 @@ export const AboutPage: React.FC = () => {
         }
       `}} />
       <SEO 
-        title="About SK Buildings | Our Founders & Vision" 
-        description="Learn about SK Buildings, our founders, and our commitment to delivering exceptional properties and joint development projects in Bangalore."
-        url="https://skbuildings.in/about"
+        title="About HYVORA Property Management | Smart Real Estate Platform" 
+        description="Learn about HYVORA Property Management, our mission, vision, and technology-driven approach to modern property and tenant management."
+        url="https://hyvorademo.in/about"
       />
       <div className="min-h-screen bg-dark py-8 md:py-12 px-4 sm:px-8 max-w-7xl mx-auto space-y-12 md:space-y-24">
         
-        {/* 1. About SK Buildings Header */}
+        {/* 1. About Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] commanding-calm-font">About <span className="brand-text text-[#d4af37]">SK Buildings</span></h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] commanding-calm-font">About <span className="brand-text text-[#d4af37]">HYVORA Property Management</span></h1>
           <p className="text-grey-light max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
-            Building the foundation of tomorrow with trust, quality, and unparalleled excellence in real estate and property management since 2008.
+            Empowering real-estate businesses, property managers, and tenants with smart automation, transparent operations, and seamless digital property management.
           </p>
         </div>
 
@@ -54,10 +54,10 @@ export const AboutPage: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 commanding-calm-font">Our Story</h2>
           <div className="space-y-4 text-grey-light leading-relaxed text-sm md:text-base">
             <p>
-              <span className="brand-text text-white text-sm">SK Buildings</span> began its journey in 2008 with a simple yet powerful idea: to provide high-quality, reliable, and accessible living and commercial spaces. What started as a modest endeavor has grown into a trusted name in the real estate sector.
+              <span className="brand-text text-white text-sm">HYVORA Property Management</span> began with a powerful vision: to revolutionize real estate operations through automation, modern UI/UX, and transparent property management. Built under the HYVORA philosophy of "Build. Automate. Conquer.", our platform unifies landlords, facility managers, and tenants into one connected ecosystem.
             </p>
             <p>
-              Over the years, we have continuously evolved, embracing modern architecture while staying true to our core values of integrity and customer satisfaction. Every project we undertake is a testament to our dedication to building not just structures, but vibrant communities where people can thrive.
+              Over the years, we have continuously evolved, pairing architectural excellence with robust SaaS workflows—covering online rent collection, automated maintenance tracking, document storage, and multi-property oversight.
             </p>
           </div>
         </section>
@@ -150,19 +150,19 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
             <div className="flex-1 space-y-4 text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-white commanding-calm-font">Sunil Kumar</h2>
-              <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-xs md:text-sm">Founder & Chairman</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white commanding-calm-font">Property Administrator</h2>
+              <p className="text-[#d4af37] font-semibold tracking-wider uppercase text-xs md:text-sm">HYVORA Operations & Portfolio Management</p>
               
               <div className="bg-dark/50 p-4 md:p-6 rounded-xl border-l-4 border-[#d4af37] my-4 md:my-6 text-left">
                 <p className="text-grey-light italic leading-relaxed text-sm md:text-base">
-                  "Our mission has always been to build more than just four walls. We strive to create environments that inspire, protect, and nurture the families and businesses that reside within them. Trust is the foundation of every brick we lay."
+                  "Our mission is to combine cutting-edge technology with tenant-first care. We simplify property administration so communities and property managers can operate with effortless efficiency and absolute peace of mind."
                 </p>
               </div>
               
               <div>
                 <h4 className="text-white font-semibold mb-2">Experience & Vision</h4>
                 <p className="text-grey-light text-xs md:text-sm leading-relaxed">
-                  "With over 18 years of hands-on experience in real estate development and property management since founding <span className="brand-text text-white text-xs">SK Buildings</span> in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies."
+                  "With extensive hands-on expertise in automated property management, tenant workflows, and digital operations, our administration team delivers sustainable, reliable, and scalable living spaces backed by HYVORA technology."
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@ export const AboutPage: React.FC = () => {
               <h2 className="text-xl md:text-2xl font-bold text-white commanding-calm-font">Our Vision</h2>
             </div>
             <p className="text-grey-light text-sm md:text-base leading-relaxed">
-              To be the most trusted and innovative real estate developer in the region, recognized for our commitment to quality, sustainable building practices, and creating spaces that significantly enhance the quality of life for our residents and business partners.
+              To be the premier property management platform recognized for automating operations, fostering vibrant resident communities, and providing unmatched transparency for real-estate portfolios.
             </p>
           </Card>
 
@@ -191,15 +191,15 @@ export const AboutPage: React.FC = () => {
               <h2 className="text-xl md:text-2xl font-bold text-white commanding-calm-font">Our Mission</h2>
             </div>
             <p className="text-grey-light text-sm md:text-base leading-relaxed">
-              To deliver exceptional property management and development services by prioritizing transparency, architectural excellence, and tenant satisfaction. We aim to build enduring relationships with our clients by consistently exceeding their expectations.
+              To deliver exceptional property management services through automated rent tracking, proactive maintenance, architectural excellence, and tenant-first customer support.
             </p>
           </Card>
         </section>
 
-        {/* 7. Why Choose SK Buildings */}
+        {/* 7. Why Choose HYVORA Property Management */}
         <section className="space-y-8 md:space-y-12">
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-4 commanding-calm-font">Why Choose <span className="brand-text text-white">SK Buildings</span>?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-4 commanding-calm-font">Why Choose <span className="brand-text text-white">HYVORA Property Management</span>?</h2>
             <p className="text-grey-light text-sm md:text-base max-w-2xl mx-auto">
               We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
             </p>

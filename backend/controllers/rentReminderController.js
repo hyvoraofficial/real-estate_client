@@ -48,7 +48,7 @@ exports.sendRentReminders = async () => {
     if (tenants) {
       for (const tenant of tenants) {
         const dueDateStr = new Date(tenant.rent_due_date).toDateString();
-        const message = `Hello ${tenant.name || "Tenant"}! Your rent of ₹${tenant.rent_amount} for SK Buildings is due on ${dueDateStr}. Please pay on time.`;
+        const message = `Hello ${tenant.name || "Tenant"}! Your rent of ₹${tenant.rent_amount} for HYVORA Property Management is due on ${dueDateStr}. Please pay on time.`;
 
         if (tenant.phone) {
           await sendSMS(tenant.phone, message);

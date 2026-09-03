@@ -132,7 +132,7 @@ export const UserDashboard: React.FC = () => {
                   <div>
                     <p className="font-bold text-white text-base">{alert.message}</p>
                     <p className="text-grey-light text-xs">
-                      Please pay on time to avoid interest charges or contact owner.
+                      Please pay on time to avoid interest charges or contact property support.
                     </p>
                   </div>
                 </div>
@@ -148,12 +148,12 @@ export const UserDashboard: React.FC = () => {
                   </Button>
                   <Button
                     onClick={() => {
-                      toast.success('Owner contact: +91 9110443387');
+                      toast.success('HYVORA Property Support: +91 8217512581');
                     }}
                     variant="outline"
                     size="sm"
                   >
-                    Contact Owner
+                    Contact Support
                   </Button>
                 </div>
               </div>

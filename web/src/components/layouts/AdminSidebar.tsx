@@ -35,12 +35,14 @@ export const AdminSidebar: React.FC = () => {
 
   return (
     <div className="w-64 bg-dark-light border-r border-primary/20 flex flex-col h-screen sticky top-0">
-      {/* Logo Area */}
-      <div className="py-8 flex items-center justify-center border-b border-primary/20">
-        <picture className="w-48 flex items-center justify-center">
-          <source srcSet="/logo.webp" type="image/webp" />
-          <img src="/logo.png" alt="logo" className="w-48 h-auto object-contain drop-shadow-lg" width={192} height={177} />
-        </picture>
+      {/* Brand Header */}
+      <div className="py-6 px-4 flex flex-col items-center justify-center border-b border-primary/20 bg-dark/40">
+        <span className="text-2xl font-black text-primary tracking-wider uppercase" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          HYVORA
+        </span>
+        <span className="text-[10px] font-bold text-gray-300 tracking-widest uppercase mt-1 px-2 py-0.5 rounded bg-primary/10 border border-primary/20">
+          Property Management
+        </span>
       </div>
 
       {/* Navigation */}

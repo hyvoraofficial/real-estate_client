@@ -184,17 +184,17 @@ export const HomePage: React.FC = () => {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "SK Buildings",
-    "url": "https://skbuildings.in",
-    "logo": "https://skbuildings.in/logo.png",
+    "name": "HYVORA Property Management",
+    "url": "https://hyvorademo.in",
+    "logo": "https://hyvorademo.in/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-9110443387",
+      "telephone": "+91-8217512581",
       "contactType": "customer service"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "SK Building, Pattandur Agrahara, Whitefield Post",
+      "streetAddress": "HYVORA Property Management, Bengaluru, Karnataka",
       "addressLocality": "Bengaluru",
       "postalCode": "560066",
       "addressCountry": "IN"
@@ -205,46 +205,38 @@ export const HomePage: React.FC = () => {
     <React.Fragment>
       <SEO schema={orgSchema} />
       <div className="min-h-screen bg-dark">
-        {/* Split Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 min-h-[150px] lg:min-h-[180px]">
-
-          {/* Left Column (1/4): Logo */}
-          <div className="hidden lg:flex lg:col-span-1 bg-white items-center justify-center p-0 m-0 lg:border-b-0 lg:border-r border-slate-200 shadow-sm z-10 relative overflow-hidden h-full">
-            <picture className="w-full h-full flex items-center justify-center">
-              <source srcSet="/logo.webp" type="image/webp" />
-              <img src="/logo.png" alt="logo" className="w-full h-full object-contain p-0 m-0" width={870} height={804} />
+        {/* Hero Section */}
+        <div className="relative min-h-[160px] lg:min-h-[220px] flex items-center justify-center overflow-hidden border-b border-slate-800">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <picture className="w-full h-full">
+              <source srcSet="/hero_bg.webp" type="image/webp" />
+              <img 
+                src="/hero_bg.png" 
+                alt="Hero background" 
+                className="w-full h-full object-cover" 
+                fetchPriority="high" 
+                width={1024} 
+                height={1024} 
+              />
             </picture>
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/50 to-dark/80"></div>
           </div>
 
-          {/* Right Column (3/4): Hero Image & Search */}
-          <div className="lg:col-span-3 relative flex items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <picture className="w-full h-full">
-                <source srcSet="/hero_bg.webp" type="image/webp" />
-                <img 
-                  src="/hero_bg.png" 
-                  alt="Hero background" 
-                  className="w-full h-full object-cover" 
-                  fetchPriority="high" 
-                  width={1024} 
-                  height={1024} 
-                />
-              </picture>
-              {/* Subtle Gradient Overlay to ensure minimum readability without darkening too much */}
-              <div className="absolute inset-0 bg-gradient-to-r from-dark/30 to-transparent"></div>
-            </div>
-
-            <div className="container relative z-10 mx-auto px-4 lg:px-6 py-4 lg:py-6 flex flex-col items-center justify-center">
+          <div className="container relative z-10 mx-auto px-4 lg:px-6 py-6 lg:py-8 flex flex-col items-center justify-center">
 
               {/* Text enclosed in a navy blue box */}
               <div className="bg-dark/80 backdrop-blur-sm p-4 md:p-6 rounded-xl md:rounded-2xl mb-4 md:mb-6 text-center max-w-2xl w-full shadow-2xl border border-white/10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                  <span>HYVORA Property Management System</span>
+                </div>
                 <h1 className="text-xl lg:text-3xl font-bold text-white mb-2">
-                  Welcome to <span className="text-primary">Comfort & Convenience</span>
+                  Smart Property Management for <span className="text-primary">Modern Living</span>
                 </h1>
 
-                <p className="text-xs lg:text-sm text-white font-medium">
-                  Explore beautifully maintained flats and commercial spaces designed to perfectly suit your lifestyle.
+                <p className="text-xs lg:text-sm text-gray-300 font-medium">
+                  Smart property management for modern real-estate businesses. Explore available units, automate rent tracking, and streamline maintenance operations.
                 </p>
               </div>
 
@@ -272,7 +264,6 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
 
         {/* Booked / Rented Properties Section (For Logged in Tenant) */}
         {isAuthenticated && user?.role === 'user' && myBookings.length > 0 && (
@@ -529,10 +520,10 @@ export const HomePage: React.FC = () => {
             </div>
           </section>
 
-          {/* Why Choose SK Buildings Section */}
+          {/* Why Choose HYVORA Property Management Section */}
           <section className="mt-12 md:mt-24 space-y-8 md:space-y-12 pb-8 md:pb-16">
             <div className="text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 md:mb-4 font-serif">Why Choose <span className="brand-text text-slate-900">SK Buildings</span>?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 md:mb-4 font-serif">Why Choose <span className="brand-text text-slate-900">HYVORA Property Management</span>?</h2>
               <p className="text-slate-600 text-sm md:text-base max-w-2xl mx-auto">
                 We don't just rent out spaces; we provide complete peace of mind. Here is what sets us apart from the rest.
               </p>

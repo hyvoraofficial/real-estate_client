@@ -8,32 +8,32 @@ import { SEO } from '../components/SEO';
 
 const SEO_CONFIGS: Record<string, { title: string, h1: string, description: string, typeFilter: string[], keywords: string }> = {
   '/flats-for-rent-whitefield': {
-    title: 'Flats for Rent in Whitefield, Bangalore | SK Buildings',
+    title: 'Flats for Rent in Whitefield, Bangalore | HYVORA Property Management',
     h1: 'Flats for Rent in Whitefield',
-    description: 'Find the best residential flats for rent in Whitefield, Bangalore. Premium amenities, 24/7 security, and family-friendly environments by SK Buildings.',
+    description: 'Find the best residential flats for rent in Whitefield, Bangalore. Premium amenities, 24/7 security, and family-friendly environments managed by HYVORA Property Management.',
     typeFilter: ['flat'],
-    keywords: 'flats, rent, whitefield, bangalore, residential'
+    keywords: 'flats, rent, whitefield, bangalore, residential, hyvora'
   },
   '/1bhk-whitefield': {
-    title: '1 BHK Flats for Rent in Whitefield | SK Buildings',
+    title: '1 BHK Flats for Rent in Whitefield | HYVORA Property Management',
     h1: '1 BHK Flats in Whitefield',
-    description: 'Looking for a 1 BHK flat in Whitefield? Explore affordable and premium 1 BHK rental properties with modern amenities by SK Buildings.',
+    description: 'Looking for a 1 BHK flat in Whitefield? Explore affordable and premium 1 BHK rental properties with modern amenities managed by HYVORA Property Management.',
     typeFilter: ['flat'],
-    keywords: '1 bhk, rent, whitefield, flat, apartment'
+    keywords: '1 bhk, rent, whitefield, flat, apartment, hyvora'
   },
   '/commercial-shops-whitefield': {
-    title: 'Commercial Shops for Rent in Whitefield | SK Buildings',
+    title: 'Commercial Shops for Rent in Whitefield | HYVORA Property Management',
     h1: 'Commercial Shops in Whitefield',
-    description: 'Prime commercial shops and office spaces for rent in Whitefield. High footfall areas perfect for your growing business.',
+    description: 'Prime commercial shops and office spaces for rent in Whitefield. High footfall areas perfect for your growing business, managed by HYVORA Property Management.',
     typeFilter: ['shop'],
-    keywords: 'commercial shops, rent, whitefield, office space, retail'
+    keywords: 'commercial shops, rent, whitefield, office space, retail, hyvora'
   },
   '/rental-properties-bangalore': {
-    title: 'Rental Properties in Bangalore | SK Buildings',
+    title: 'Rental Properties in Bangalore | HYVORA Property Management',
     h1: 'Rental Properties in Bangalore',
-    description: 'Discover top rental properties in Bangalore. Choose from premium residential flats and commercial spaces managed by SK Buildings.',
+    description: 'Discover top rental properties in Bangalore. Choose from premium residential flats and commercial spaces managed by HYVORA Property Management.',
     typeFilter: ['flat', 'shop'],
-    keywords: 'rental properties, bangalore, flats, shops, real estate'
+    keywords: 'rental properties, bangalore, flats, shops, real estate, hyvora'
   }
 };
 
@@ -44,11 +44,11 @@ export const SEOLandingPage: React.FC = () => {
 
   // Fallback to a default config if route is somehow unmatched
   const config = SEO_CONFIGS[location.pathname] || {
-    title: 'Properties for Rent | SK Buildings',
+    title: 'Properties for Rent | HYVORA Property Management',
     h1: 'Properties for Rent',
-    description: 'Explore premium residential and commercial properties for rent by SK Buildings.',
+    description: 'Explore premium residential and commercial properties for rent managed by HYVORA Property Management.',
     typeFilter: ['flat', 'shop'],
-    keywords: 'properties, rent'
+    keywords: 'properties, rent, hyvora'
   };
 
   useEffect(() => {
@@ -156,7 +156,7 @@ export const SEOLandingPage: React.FC = () => {
       <SEO 
         title={config.title}
         description={config.description}
-        url={`https://skbuildings.in${location.pathname}`}
+        url={`https://hyvorademo.in${location.pathname}`}
       />
       <div className="min-h-screen bg-dark pt-12 md:pt-24 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">

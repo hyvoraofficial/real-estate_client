@@ -1,10 +1,10 @@
-# SK Buildings - UI Navigation Guide
+# HYVORA Property Management - UI Navigation Guide
 
 ## Complete URL Structure
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    SK BUILDINGS PORTAL                       │
+│                    HYVORA PMS PORTAL                       │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  PUBLIC ROUTES (No Login Required)                          │

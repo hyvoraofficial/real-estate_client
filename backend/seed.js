@@ -32,15 +32,15 @@ async function seed() {
     // Create Projects
     console.log("Creating projects...");
     const project1 = await Project.create({
-      name: "SK Heights",
-      location: "Baner, Pune",
-      description: "Premium residential apartments with world-class amenities",
+      name: "HYVORA Heights",
+      location: "Bengaluru, Karnataka",
+      description: "Premium residential apartments with modern amenities",
     });
 
     const project2 = await Project.create({
-      name: "SK Plaza",
-      location: "Kothrud, Pune",
-      description: "Modern commercial complex in a prime location",
+      name: "HYVORA Plaza",
+      location: "Bengaluru, Karnataka",
+      description: "Modern commercial complex in a prime business district",
     });
     console.log("Projects created.");
 
@@ -53,7 +53,7 @@ async function seed() {
       price: 5000000,
       floor: 1,
       sizeSqFt: 1200,
-      description: "Spacious 2 BHK residential apartment with modern modular kitchen, balcony, and premium bathroom fittings. Located in the heart of Baner.",
+      description: "Spacious 2 BHK residential apartment with modern modular kitchen, balcony, and premium bathroom fittings. Located in Bengaluru.",
       createdBy: admin._id,
     });
 

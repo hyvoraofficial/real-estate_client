@@ -50,16 +50,65 @@ export const AdminLoginPage: React.FC = () => {
               </div>
             </div>
             <h1 className="text-3xl font-bold text-primary mb-2">🔐 Admin Console</h1>
-            <p className="text-grey-light"><span className="brand-text text-sm">SK Buildings</span> Administration</p>
+            <p className="text-grey-light"><span className="brand-text text-sm">HYVORA Property Management</span> • Administration</p>
           </div>
 
           <div className="flex flex-col items-center justify-center space-y-6">
-            <p className="text-grey-light text-center">
-              Please sign in with your authorized admin Google account to access the dashboard.
+            {/* Quick Demo Access Card */}
+            <div className="w-full bg-gradient-to-r from-primary/15 via-primary/5 to-transparent border border-primary/30 p-4 rounded-xl text-left">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">Demo Evaluation Mode</span>
+                <span className="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded font-semibold">HYVORA DEMO</span>
+              </div>
+              <p className="text-xs text-gray-300 mb-3">
+                Evaluating the PMS software? Click below for instant one-click access to the Property Administrator dashboard.
+              </p>
+              <button
+                type="button"
+                onClick={async () => {
+                  setIsLoading(true);
+                  try {
+                    const response = await authService.adminLogin({ username: 'admin@hyvora.in', password: 'demo123' });
+                    if (response.success && response.token && response.user) {
+                      login(response.token, response.user);
+                      toast.success('Signed in as Property Administrator');
+                      navigate('/admin');
+                      return;
+                    }
+                  } catch (err) {
+                    // Fallback to local demo session if backend offline
+                  }
+                  const demoUser: any = {
+                    id: 'hyvora-admin-demo',
+                    name: 'Property Administrator',
+                    phone: '8217512581',
+                    role: 'admin',
+                    email: 'admin@hyvora.in',
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString(),
+                  };
+                  login('hyvora-demo-admin-token', demoUser);
+                  toast.success('Signed in as Property Administrator (Demo)');
+                  navigate('/admin');
+                }}
+                className="w-full bg-primary hover:bg-primary-light text-dark font-bold py-2.5 px-4 rounded-lg text-sm transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>⚡ Instant Admin Demo Access</span>
+              </button>
+            </div>
+
+            <div className="relative flex py-1 items-center w-full">
+              <div className="flex-grow border-t border-gray-700"></div>
+              <span className="flex-shrink mx-4 text-gray-500 text-xs uppercase tracking-wider">or sign in with google</span>
+              <div className="flex-grow border-t border-gray-700"></div>
+            </div>
+
+            <p className="text-grey-light text-center text-xs">
+              Sign in with your authorized HYVORA administrator Google account.
             </p>
             
             {isLoading ? (
-              <div className="text-primary font-bold">Verifying Google Login...</div>
+              <div className="text-primary font-bold">Verifying Admin Access...</div>
             ) : (
               <GoogleLogin
                 onSuccess={handleGoogleSuccess}

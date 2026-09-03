@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '../../components/Card';
-import { Building2, Home, CheckCircle, XCircle } from 'lucide-react';
+import { Building2, Home, CheckCircle, IndianRupee, Users, Wrench, AlertCircle, Sparkles } from 'lucide-react';
 import api from '../../services/api';
 import { Loading } from '../../components/Loading';
+import { formatCurrency } from '../../utils/helpers';
 
 export const AdminOverview: React.FC = () => {
   const [data, setData] = useState<any>(null);
@@ -28,53 +29,102 @@ export const AdminOverview: React.FC = () => {
 
   return (
     <div className="p-8 space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold text-white mb-2">Dashboard Overview</h1>
-        <p className="text-grey-light">Welcome back, Admin</p>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <h1 className="text-3xl font-bold text-white">Dashboard Overview</h1>
+            <span className="inline-flex items-center gap-1 bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-primary/30">
+              <Sparkles size={10} />
+              HYVORA DEMO
+            </span>
+          </div>
+          <p className="text-grey-light">Welcome back, Property Administrator</p>
+        </div>
       </div>
       
-      {/* KPI Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="flex items-center gap-4 border-l-4 border-primary">
+      {/* KPI Cards Grid - Fictional Demo Statistics */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <Card className="flex items-center gap-4 border-l-4 border-primary hover:border-primary-light transition-all">
           <div className="p-3 bg-primary/10 rounded-lg">
             <Building2 className="text-primary" size={24} />
           </div>
           <div>
-            <p className="text-grey-light text-sm">Total Projects</p>
-            <p className="text-2xl font-bold text-white">{totals?.totalProjects || 0}</p>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Total Properties</p>
+            <p className="text-2xl font-bold text-white">{totals?.totalProperties ?? 24}</p>
           </div>
         </Card>
         
-        <Card className="flex items-center gap-4 border-l-4 border-blue-500">
+        <Card className="flex items-center gap-4 border-l-4 border-blue-500 hover:border-blue-400 transition-all">
           <div className="p-3 bg-blue-500/10 rounded-lg">
             <Home className="text-blue-500" size={24} />
           </div>
           <div>
-            <p className="text-grey-light text-sm">Total Properties</p>
-            <p className="text-2xl font-bold text-white">{totals?.totalProperties || 0}</p>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Total Units</p>
+            <p className="text-2xl font-bold text-white">{totals?.totalUnits ?? 186}</p>
           </div>
         </Card>
 
-        <Card className="flex items-center gap-4 border-l-4 border-green-500">
+        <Card className="flex items-center gap-4 border-l-4 border-amber-500 hover:border-amber-400 transition-all">
+          <div className="p-3 bg-amber-500/10 rounded-lg">
+            <CheckCircle className="text-amber-500" size={24} />
+          </div>
+          <div>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Occupied Units</p>
+            <p className="text-2xl font-bold text-white">{totals?.bookedProperties ?? 154}</p>
+          </div>
+        </Card>
+
+        <Card className="flex items-center gap-4 border-l-4 border-green-500 hover:border-green-400 transition-all">
           <div className="p-3 bg-green-500/10 rounded-lg">
             <CheckCircle className="text-green-500" size={24} />
           </div>
           <div>
-            <p className="text-grey-light text-sm">Available Properties</p>
-            <p className="text-2xl font-bold text-white">{totals?.availableProperties || 0}</p>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Available Units</p>
+            <p className="text-2xl font-bold text-white">{totals?.availableProperties ?? 32}</p>
           </div>
         </Card>
 
-        <Card className="flex items-center gap-4 border-l-4 border-yellow-500">
-          <div className="p-3 bg-yellow-500/10 rounded-lg">
-            <XCircle className="text-yellow-500" size={24} />
+        <Card className="flex items-center gap-4 border-l-4 border-emerald-400 hover:border-emerald-300 transition-all">
+          <div className="p-3 bg-emerald-400/10 rounded-lg">
+            <IndianRupee className="text-emerald-400" size={24} />
           </div>
           <div>
-            <p className="text-grey-light text-sm">Booked Properties</p>
-            <p className="text-2xl font-bold text-white">{totals?.bookedProperties || 0}</p>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Monthly Revenue</p>
+            <p className="text-2xl font-bold text-white">
+              {totals?.monthlyRevenue ? formatCurrency(totals.monthlyRevenue) : '₹18.4L'}
+            </p>
           </div>
         </Card>
 
+        <Card className="flex items-center gap-4 border-l-4 border-purple-500 hover:border-purple-400 transition-all">
+          <div className="p-3 bg-purple-500/10 rounded-lg">
+            <Users className="text-purple-500" size={24} />
+          </div>
+          <div>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Active Tenants</p>
+            <p className="text-2xl font-bold text-white">{totals?.totalTenants ?? 142}</p>
+          </div>
+        </Card>
+
+        <Card className="flex items-center gap-4 border-l-4 border-orange-500 hover:border-orange-400 transition-all">
+          <div className="p-3 bg-orange-500/10 rounded-lg">
+            <Wrench className="text-orange-500" size={24} />
+          </div>
+          <div>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Pending Maintenance</p>
+            <p className="text-2xl font-bold text-white">12</p>
+          </div>
+        </Card>
+
+        <Card className="flex items-center gap-4 border-l-4 border-rose-500 hover:border-rose-400 transition-all">
+          <div className="p-3 bg-rose-500/10 rounded-lg">
+            <AlertCircle className="text-rose-500" size={24} />
+          </div>
+          <div>
+            <p className="text-grey-light text-xs uppercase font-medium tracking-wide">Open Complaints</p>
+            <p className="text-2xl font-bold text-white">7</p>
+          </div>
+        </Card>
       </div>
 
       <div className="grid grid-cols-1 gap-8">

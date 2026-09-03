@@ -1,11 +1,11 @@
-# SK Buildings - Admin & Tenant UI Structure
+# HYVORA Property Management - Admin & Tenant UI Structure
 
 ## Overview
 I've successfully implemented a complete separation between **Admin Dashboard** and **Tenant/Customer Dashboard** with distinct features for each user role.
 
 ---
 
-## 1. **ADMIN DASHBOARD** (For SK Buildings Owner)
+## 1. **ADMIN DASHBOARD** (For Property Administrator)
 **Access Path:** `/admin/dashboard`
 
 ### Features:

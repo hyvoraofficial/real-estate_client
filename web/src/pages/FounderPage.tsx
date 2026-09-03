@@ -23,11 +23,11 @@ export const FounderPage: React.FC = () => {
   }, []);
 
 
-  // Display the first founder as the main founder for SEO, or fallback to default
+  // Display the management profile, or fallback to default
   const mainFounder = founders[0] || {
-    name: "Sunil Kumar",
-    role: "Founder & Chairman",
-    qualification: "With over 18 years of hands-on experience in real estate development and property management since founding SK Buildings in 2008, Sunil Kumar has led the company from a single-property investment to a prominent real estate portfolio. His visionary approach focuses on sustainable development and tenant-first policies.",
+    name: "Property Administrator",
+    role: "HYVORA Operations & Portfolio Management",
+    qualification: "With extensive hands-on expertise in automated property management, tenant workflows, and digital operations, our administration team delivers sustainable, reliable, and scalable living spaces backed by HYVORA technology.",
     image_url: ""
   };
 
@@ -38,26 +38,26 @@ export const FounderPage: React.FC = () => {
     "jobTitle": mainFounder.role,
     "worksFor": {
       "@type": "Organization",
-      "name": "SK Buildings"
+      "name": "HYVORA Property Management"
     },
     "description": mainFounder.qualification || "",
-    "image": mainFounder.image_url || "https://skbuildings.in/logo.png",
-    "url": "https://skbuildings.in/founder"
+    "image": mainFounder.image_url || "https://hyvorademo.in/logo.png",
+    "url": "https://hyvorademo.in/founder"
   };
 
   return (
     <>
       <SEO
-        title={`${mainFounder.name} - ${mainFounder.role} | SK Buildings`}
-        description={mainFounder.qualification || `Meet ${mainFounder.name}, the ${mainFounder.role} of SK Buildings.`}
+        title={`${mainFounder.name} - ${mainFounder.role} | HYVORA Property Management`}
+        description={mainFounder.qualification || `Meet the leadership and administration team behind HYVORA Property Management.`}
         schema={personSchema}
-        url="https://skbuildings.in/founder"
+        url="https://hyvorademo.in/founder"
       />
       <div className="min-h-screen bg-dark py-12 md:py-24 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] font-serif">Meet Our Founder</h1>
-            <p className="text-grey-light text-lg">The vision and leadership behind <span className="brand-text">SK Buildings</span>.</p>
+            <h1 className="text-3xl md:text-5xl font-bold text-[#d4af37] font-serif">Management & Operations</h1>
+            <p className="text-grey-light text-lg">The administration and operational team behind <span className="brand-text">HYVORA Property Management</span>.</p>
           </div>
 
           {isLoading ? (
@@ -86,13 +86,13 @@ export const FounderPage: React.FC = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <a href={mainFounder.linkedin_url || "#"} target="_blank" rel="noopener noreferrer" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
+                  <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors" title="HYVORA Official">
                     <Linkedin size={24} />
                   </a>
-                  <a href="mailto:info@skbuildings.in" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
+                  <a href="mailto:hyvora.official@gmail.com" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors" title="Contact Email">
                     <Mail size={24} />
                   </a>
-                  <a href="tel:+919110443387" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
+                  <a href="tel:8217512581" className="bg-[#d4af37]/10 p-3 rounded-full text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors" title="Contact Support">
                     <Phone size={24} />
                   </a>
                 </div>

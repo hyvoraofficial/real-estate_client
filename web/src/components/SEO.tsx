@@ -9,10 +9,10 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({ 
-  title = "SK Buildings | Flats, Shops & Rental Properties in Bangalore", 
-  description = "SK Buildings offers residential flats, commercial shops, rental properties and joint development projects in Bangalore and Whitefield.",
+  title = "HYVORA Property Management | Smart Real Estate Software", 
+  description = "HYVORA Property Management is a modern property management platform for managing properties, apartments, tenants, maintenance, payments, complaints, documents, and real-estate operations.",
   schema,
-  url = "https://skbuildings.in"
+  url = "https://hyvorademo.in"
 }) => {
   return (
     <Helmet>

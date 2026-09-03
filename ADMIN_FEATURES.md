@@ -1,7 +1,7 @@
 # Admin Dashboard - Complete Feature Documentation
 
 ## Overview
-The SK Buildings Admin Dashboard is a comprehensive property management system that allows the SK Buildings owner to manage properties, bookings, and tenant information all from one centralized console.
+The HYVORA Property Management Admin Dashboard is a comprehensive property management system that allows the Property Administrator to manage properties, bookings, and tenant information all from one centralized console.
 
 ---
 
@@ -337,7 +337,7 @@ Each tenant card displays:
 
 ### Top Navigation Bar
 - Shows "Admin Dashboard" title
-- Subtitle: "Manage properties, bookings, and tenants for SK Buildings"
+- Subtitle: "Manage properties, bookings, and tenants for HYVORA Property Management"
 - Four main tabs: Overview, Properties, Bookings, Tenants
 
 ### Tab Buttons

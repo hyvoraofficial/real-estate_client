@@ -57,16 +57,19 @@ export const Navbar: React.FC = () => {
               </button>
             )}
 
-            {/* Company Name / Logo Box */}
+            {/* Company Name / Brand Typography */}
             <Link
               to="/"
-              className="flex items-center bg-white p-0 shadow-lg border-x border-b border-slate-200 rounded-b-xl h-24 w-20 md:h-28 md:w-24 z-50 translate-y-[12px] lg:bg-transparent lg:p-0 lg:shadow-none lg:border-none lg:rounded-none lg:h-auto lg:w-auto lg:translate-y-0"
+              className="flex items-center gap-2 z-50 py-1 hover:opacity-90 transition-opacity"
             >
-              <picture className="h-full w-full lg:hidden flex items-center justify-center">
-                <source srcSet="/logo.webp" type="image/webp" />
-                <img src="/logo.png" alt="SK Buildings Logo" className="h-full w-full object-contain" width={870} height={804} />
-              </picture>
-              <span className="hidden lg:inline text-xl lg:text-2xl text-primary tracking-wide uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800 }}>SK Buildings</span>
+              <div className="flex flex-col text-left">
+                <span className="text-xl md:text-2xl text-primary tracking-wider uppercase leading-none font-black" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                  HYVORA
+                </span>
+                <span className="text-[9px] text-gray-300 font-semibold tracking-widest uppercase mt-0.5">
+                  Property Management
+                </span>
+              </div>
             </Link>
           </div>
 

@@ -23,7 +23,7 @@ app.use("/uploads", express.static("uploads", {
 
 // Health check
 app.get("/", (req, res) => {
-  res.status(200).send("SK Buildings Backend is running");
+  res.status(200).send("HYVORA Property Management Backend is running");
 });
 
 // Auth routes (OTP login)

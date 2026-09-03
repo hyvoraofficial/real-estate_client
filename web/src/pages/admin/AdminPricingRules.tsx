@@ -85,7 +85,7 @@ export const AdminPricingRules: React.FC = () => {
     
     try {
       const currentRules = selectedProject.pricing_rules || {};
-      let updatedRules = { ...currentRules };
+      const updatedRules = { ...currentRules };
       
       if (selectedUnitType === 'shop') {
         updatedRules.shop = pricingRule;

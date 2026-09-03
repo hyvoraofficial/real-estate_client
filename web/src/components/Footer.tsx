@@ -9,20 +9,6 @@ export const Footer: React.FC = () => {
   return (
     <>
       <footer className="bg-[#1c1a17] text-gray-300 py-12 md:py-16 px-6 md:px-8 lg:px-16 border-t border-[#d4af37]/20 relative z-10 overflow-hidden">
-        {/* Background Image Overlay (Subtle) */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 pointer-events-none">
-          <picture className="w-full h-full">
-            <source srcSet="/logo.webp" type="image/webp" />
-            <img 
-              src="/logo.png" 
-              alt="Background Element" 
-              className="w-full h-full object-cover object-left" 
-              loading="lazy"
-              width={870}
-              height={804}
-            />
-          </picture>
-        </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
 
@@ -33,30 +19,32 @@ export const Footer: React.FC = () => {
             <div>
               <p className="font-bold text-gray-200 mb-1">Corporate Address:</p>
               <p className="text-sm leading-relaxed text-gray-400">
-                SK Building, Pattandur Agrahara,<br />
-                Whitefield Post,<br />
-                Bengaluru 560066
+                HYVORA Property Management<br />
+                Bengaluru, Karnataka 560066<br />
+                India
               </p>
             </div>
 
             <div>
               <p className="font-bold text-gray-200 mb-1">For enquiries:</p>
-              <p className="text-sm font-semibold">9110443387</p>
+              <a href="tel:8217512581" className="text-sm font-semibold text-white hover:text-primary transition-colors">
+                +91 8217512581
+              </a>
             </div>
 
             <div>
               <p className="font-bold text-gray-200 mb-1">Email:</p>
-              <a href="mailto:info@skbuildings.com" className="text-sm hover:text-[#d4af37] transition-colors">
-                info@skbuildings.com
+              <a href="mailto:hyvora.official@gmail.com" className="text-sm hover:text-[#d4af37] transition-colors">
+                hyvora.official@gmail.com
               </a>
             </div>
 
             <div className="flex gap-4 pt-2">
-              <a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Youtube size={20} /></a>
+              <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Facebook size={20} /></a>
+              <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Instagram size={20} /></a>
+              <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Twitter size={20} /></a>
+              <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Linkedin size={20} /></a>
+              <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4af37] transition-colors"><Youtube size={20} /></a>
             </div>
           </div>
 
@@ -66,6 +54,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-gray-400">
               <li><Link to="/properties" className="hover:text-[#d4af37] transition-colors block">Properties</Link></li>
               <li><Link to="/login" className="hover:text-[#d4af37] transition-colors block">Customer Login</Link></li>
+              <li><a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#d4af37] transition-colors block">HYVORA Official</a></li>
             </ul>
             {!isAboutPage && (
               <div className="mt-8 inline-block">
@@ -83,7 +72,22 @@ export const Footer: React.FC = () => {
               <li><Link to="/privacy-policy" className="hover:text-[#d4af37] transition-colors block">Privacy Policy</Link></li>
               <li><Link to="/terms-conditions" className="hover:text-[#d4af37] transition-colors block">Terms & Conditions</Link></li>
             </ul>
+            <div className="mt-6 pt-6 border-t border-gray-800 text-xs text-gray-500">
+              <p>Build. Automate. Conquer.</p>
+              <p className="mt-1">A HYVORA Product Demonstration</p>
+            </div>
           </div>
+        </div>
+
+        {/* Copyright and backlink */}
+        <div className="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>© {new Date().getFullYear()} HYVORA Property Management. All rights reserved.</p>
+          <p>
+            Powered by{' '}
+            <a href="https://hyvora.in" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">
+              HYVORA
+            </a>
+          </p>
         </div>
       </footer>
 
@@ -101,22 +105,22 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <a href="mailto:info@skbuildings.com" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
+                <a href="mailto:hyvora.official@gmail.com" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
                   <Mail size={20} />
                 </a>
                 <div>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</p>
-                  <a href="mailto:info@skbuildings.com" className="text-sm font-medium text-gray-800 hover:text-[#d4af37]">info@skbuildings.com</a>
+                  <a href="mailto:hyvora.official@gmail.com" className="text-sm font-medium text-gray-800 hover:text-[#d4af37]">hyvora.official@gmail.com</a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
-                <a href="tel:9110443387" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
+                <a href="tel:8217512581" className="bg-[#d4af37]/10 p-2 rounded-lg text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-colors">
                   <Phone size={20} />
                 </a>
                 <div>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Contact</p>
-                  <a href="tel:9110443387" className="text-sm font-medium text-gray-800 hover:text-[#d4af37]">9110443387</a>
+                  <a href="tel:8217512581" className="text-sm font-medium text-gray-800 hover:text-[#d4af37]">8217512581</a>
                 </div>
               </div>
             </div>

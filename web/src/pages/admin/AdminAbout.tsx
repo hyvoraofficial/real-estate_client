@@ -116,12 +116,12 @@ export const AdminAbout: React.FC = () => {
     <div className="p-8 space-y-8">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">About Us</h1>
-          <p className="text-grey-light">Manage founders and company details</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Leadership & About Us</h1>
+          <p className="text-grey-light">Manage leadership profiles and management details</p>
         </div>
         <Button onClick={() => handleOpenModal()} className="flex items-center gap-2">
           <Plus size={20} />
-          Add Founder
+          Add Team Profile
         </Button>
       </div>
 

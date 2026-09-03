@@ -1,4 +1,4 @@
-# 🚀 SK Buildings - Quick Start Guide
+# 🚀 HYVORA Property Management - Quick Start Guide
 
 ## 📍 Website URLs
 
@@ -18,7 +18,7 @@ Backend API:            http://localhost:3001
 
 ## 👤 User Roles & Access
 
-### Role: ADMIN (SK Buildings Owner)
+### Role: ADMIN (Property Administrator)
 **Login Credentials:** (Use your admin credentials)
 - **Access:** `/admin/dashboard`
 - **Permissions:**

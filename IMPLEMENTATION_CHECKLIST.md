@@ -1,14 +1,14 @@
-# ✅ SK Buildings - Implementation Complete
+# ✅ HYVORA Property Management - Implementation Complete
 
 ## Summary
 
-I've successfully created a **complete two-tier user interface** for SK Buildings with separate systems for **Admin (Owner)** and **Tenants (Customers)**.
+I've successfully created a **complete two-tier user interface** for HYVORA Property Management with separate systems for **Admin (Owner)** and **Tenants (Customers)**.
 
 ---
 
 ## 🎯 What Was Built
 
-### ✅ ADMIN DASHBOARD (For SK Buildings Owner)
+### ✅ ADMIN DASHBOARD (For Property Administrator)
 **Location:** `/admin/dashboard`
 
 #### Features Implemented:
@@ -121,7 +121,7 @@ I've successfully created a **complete two-tier user interface** for SK Building
 
 ## 🚀 How to Use
 
-### For Admin (SK Buildings Owner)
+### For Admin (Property Administrator)
 
 1. **Navigate to:** `http://localhost:5173/admin/dashboard`
 2. **Login with:** Admin credentials

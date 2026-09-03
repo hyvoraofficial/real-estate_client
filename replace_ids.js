@@ -9,7 +9,7 @@ const files = [
   'web/src/pages/PropertyDetailsPage.tsx'
 ];
 
-const basePath = '/Users/hemanth/Desktop/sk-buildings';
+const basePath = __dirname;
 
 files.forEach(file => {
   const fullPath = path.join(basePath, file);

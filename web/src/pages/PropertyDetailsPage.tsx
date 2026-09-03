@@ -105,7 +105,7 @@ export const PropertyDetailsPage: React.FC = () => {
     return null;
   }
 
-  const contactPhone = '9110443387'; // Replace with actual admin phone
+  const contactPhone = '8217512581'; // HYVORA Property Support phone
 
   return (
     <div className="min-h-screen bg-dark pb-8 md:pb-12">
