@@ -189,7 +189,7 @@ export const AdminEnquiries: React.FC = () => {
                           <Phone className="w-3.5 h-3.5" />
                         </a>
                         <a
-                          href={`https://wa.me/${cleanWhatsApp}?text=Hello%20${encodeURIComponent(enq.name)},%20I%20am%20contacting%20you%20from%20BGM%20Real%20Estate%20regarding%20your%20enquiry%20on%20${encodeURIComponent(enq.property_title || 'our property')}.`}
+                          href={`https://wa.me/${cleanWhatsApp}?text=Hello%20${encodeURIComponent(enq.name)},%20I%20am%20contacting%20you%20from%20HYVORA%20REAL%20ESTATES%20regarding%20your%20enquiry%20on%20${encodeURIComponent(enq.property_title || 'our property')}.`}
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex p-2 rounded-xl bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors"

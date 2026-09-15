@@ -10,20 +10,20 @@ interface SettingsState {
 }
 
 const defaultSettings: WebsiteSettings = {
-  company_name: "BGM Real Estate",
-  contact_person: "Balaji",
+  company_name: "HYVORA REAL ESTATES",
+  contact_person: "HYVORA Specialist",
   logo_url: "/logo.png",
-  phone: "+91 98450 10604",
-  secondary_phone: "+91 88921 40055",
-  whatsapp: "+91 98450 10604",
-  email: "bgmrealestates@gmail.com",
-  address: "BGM REAL ESTATE, Office, Opp. to NR Colony Bus Stand, Above Dose Master, NR Colony, Basavanagudi, Bengaluru, Karnataka 560019",
-  google_maps_url: "https://maps.google.com/?q=NR+Colony+Bus+Stand+Bengaluru",
+  phone: "+91 8217512581",
+  secondary_phone: "+91 8217512581",
+  whatsapp: "+91 8217512581",
+  email: "hyvora.official@gmail.com",
+  address: "HYVORA REAL ESTATES, Bengaluru, Karnataka, India",
+  google_maps_url: "https://maps.google.com/?q=Bengaluru+Karnataka+India",
   business_hours: "Mon - Sat: 9:00 AM - 8:00 PM (Sunday by Appointment)",
   hero_headline: "Exceptional Real Estate. Extraordinary Opportunities.",
-  hero_subheading: "Discover premium entire buildings, commercial properties, prime sites, and development land curated by BGM Real Estate.",
+  hero_subheading: "Discover premium entire buildings, commercial properties, prime sites, and development land curated by HYVORA REAL ESTATES.",
   hero_image_url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
-  about_content: "BGM Real Estate is a premier corporate real estate consultancy and investment advisory firm led by Balaji. We specialize in the acquisition, disposition, and strategic marketing of entire commercial and residential buildings, prime layout plots, industrial acreage, and high-yield real estate assets across Karnataka.",
+  about_content: "HYVORA REAL ESTATES is a premier corporate real estate consultancy and investment advisory firm. We specialize in the acquisition, disposition, and strategic marketing of entire commercial and residential buildings, prime layout plots, industrial acreage, and high-yield real estate assets across Karnataka.",
   mission: "To deliver uncompromising transparency, rigorous legal title verification, and maximum financial return for real estate buyers, corporate investors, and property developers.",
   vision: "To be Karnataka's most trusted and preferred corporate real estate advisory and high-value asset brokerage partner."
 };

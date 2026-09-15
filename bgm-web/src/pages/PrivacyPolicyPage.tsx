@@ -7,7 +7,7 @@ export const PrivacyPolicyPage: React.FC = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
       <Link
         to="/"
-        className="inline-flex items-center space-x-2 text-sm font-semibold text-slate-600 hover:text-bgm-800"
+        className="inline-flex items-center space-x-2 text-sm font-semibold text-slate-600 hover:text-[#6B0F1A]"
       >
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Home</span>
@@ -21,7 +21,7 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
           <p>
-            At BGM Real Estates, we take your privacy seriously. This Privacy Policy details how we collect, safeguard, and utilize your personal information.
+            At HYVORA REAL ESTATES, we take your privacy seriously. This Privacy Policy details how we collect, safeguard, and utilize your personal information.
           </p>
           <h3 className="text-base font-bold text-slate-900 pt-2">1. Information We Collect</h3>
           <p>

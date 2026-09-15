@@ -46,11 +46,10 @@ app.use("/admin/data", adminDataRoutes);
 app.use("/admin/founders", founderRoutes);
 
 /* =========================
-   BGM REAL ESTATE API ROUTES
+   HYVORA REAL ESTATES API ROUTES
 ========================================= */
-const bgmRoutes = require("./routes/bgmRoutes");
-app.use("/api", bgmRoutes);
-app.use("/api/bgm", bgmRoutes);
+const realEstateRoutes = require("./routes/realEstateRoutes");
+app.use("/api", realEstateRoutes);
 
 /* =========================
    TENANT / BUSINESS ROUTES

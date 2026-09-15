@@ -79,7 +79,7 @@ export const AdminDashboard: React.FC = () => {
             Executive Real Estate CMS
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            BGM Real Estate Portfolio & Client Lead Management
+            HYVORA REAL ESTATES Portfolio & Client Lead Management
           </p>
         </div>
 
@@ -238,7 +238,7 @@ export const AdminDashboard: React.FC = () => {
                         <Phone className="w-3.5 h-3.5" />
                       </a>
                       <a
-                        href={`https://wa.me/${enq.phone.replace(/[^0-9]/g, '')}?text=Hello%20${encodeURIComponent(enq.name)},%20I%20am%20contacting%20you%20from%20BGM%20Real%20Estate.`}
+                        href={`https://wa.me/${enq.phone.replace(/[^0-9]/g, '')}?text=Hello%20${encodeURIComponent(enq.name)},%20I%20am%20contacting%20you%20from%20HYVORA%20REAL%20ESTATES.`}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex p-1.5 rounded-lg bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors"

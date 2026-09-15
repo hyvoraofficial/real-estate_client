@@ -17,12 +17,12 @@ exports.adminProtect = async (req, res, next) => {
     }
 
     // Support demo/fallback admin credentials
-    if (decoded.id === "hyvora-admin-demo" || decoded.id === "bgm-admin-demo") {
+    if (decoded.id === "hyvora-admin-demo") {
       req.admin = {
         _id: decoded.id,
         id: decoded.id,
-        name: decoded.name || "BGM Administrator",
-        email: decoded.email || "admin@bgmrealestate.in",
+        name: decoded.name || "HYVORA Administrator",
+        email: decoded.email || "admin@hyvora.in",
         role: "admin"
       };
       return next();
@@ -36,8 +36,8 @@ exports.adminProtect = async (req, res, next) => {
       req.admin = {
         _id: decoded.id,
         id: decoded.id,
-        name: decoded.name || "Admin",
-        email: decoded.email || "admin@bgmrealestate.in",
+        name: decoded.name || "HYVORA Administrator",
+        email: decoded.email || "admin@hyvora.in",
         role: "admin"
       };
       return next();

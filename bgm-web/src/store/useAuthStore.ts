@@ -20,32 +20,32 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
-  user: JSON.parse(localStorage.getItem('bgm_user') || 'null'),
-  admin: JSON.parse(localStorage.getItem('bgm_admin') || 'null'),
-  userToken: localStorage.getItem('bgm_user_token'),
-  adminToken: localStorage.getItem('bgm_admin_token'),
+  user: JSON.parse(localStorage.getItem('hyvora_user') || 'null'),
+  admin: JSON.parse(localStorage.getItem('hyvora_admin') || 'null'),
+  userToken: localStorage.getItem('hyvora_user_token'),
+  adminToken: localStorage.getItem('hyvora_admin_token'),
 
   setUserAuth: (user, token) => {
-    localStorage.setItem('bgm_user', JSON.stringify(user));
-    localStorage.setItem('bgm_user_token', token);
+    localStorage.setItem('hyvora_user', JSON.stringify(user));
+    localStorage.setItem('hyvora_user_token', token);
     set({ user, userToken: token });
   },
 
   setAdminAuth: (admin, token) => {
-    localStorage.setItem('bgm_admin', JSON.stringify(admin));
-    localStorage.setItem('bgm_admin_token', token);
+    localStorage.setItem('hyvora_admin', JSON.stringify(admin));
+    localStorage.setItem('hyvora_admin_token', token);
     set({ admin, adminToken: token });
   },
 
   logoutUser: () => {
-    localStorage.removeItem('bgm_user');
-    localStorage.removeItem('bgm_user_token');
+    localStorage.removeItem('hyvora_user');
+    localStorage.removeItem('hyvora_user_token');
     set({ user: null, userToken: null });
   },
 
   logoutAdmin: () => {
-    localStorage.removeItem('bgm_admin');
-    localStorage.removeItem('bgm_admin_token');
+    localStorage.removeItem('hyvora_admin');
+    localStorage.removeItem('hyvora_admin_token');
     set({ admin: null, adminToken: null });
   },
 }));

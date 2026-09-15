@@ -2,7 +2,7 @@ const supabase = require("../config/supabaseClient");
 const crypto = require("crypto");
 const uuidv4 = () => crypto.randomUUID();
 
-// Default initial sample properties for BGM Real Estate
+// Default initial sample properties for HYVORA REAL ESTATES
 const initialSampleProperties = [
   {
     id: "e4a7a8d2-9b21-4f1b-872e-8390b11a0001",
@@ -47,7 +47,7 @@ const initialSampleProperties = [
     amenities: ["24/7 Security", "100% Power Backup", "2 Passenger Lifts", "Basement Parking", "Fire Safety NOC Approved", "Central HVAC Ready"],
     map_lat: 12.9352,
     map_lng: 77.6245,
-    seo_title: "Commercial Building for Sale in Koramangala Bangalore - BGM Real Estate",
+    seo_title: "Commercial Building for Sale in Koramangala Bangalore - HYVORA REAL ESTATES",
     seo_description: "Prime G+4 commercial tower for sale in Koramangala Bangalore with active rental income and 7.1% yield."
   },
   {
@@ -91,7 +91,7 @@ const initialSampleProperties = [
     amenities: ["Automatic Lift", "Covered Stilt Parking", "Cauvery Water", "Rainwater Harvesting", "CCTV Surveillance"],
     map_lat: 12.9719,
     map_lng: 77.6412,
-    seo_title: "Residential Building for Sale in Indiranagar Bangalore - BGM Real Estate",
+    seo_title: "Residential Building for Sale in Indiranagar Bangalore - HYVORA REAL ESTATES",
     seo_description: "Buy whole residential building in Indiranagar Bangalore with 12 rental units and stable cashflow."
   },
   {
@@ -128,7 +128,7 @@ const initialSampleProperties = [
     amenities: ["80ft Main Road", "Underground Electricity", "BWSSB Water & Sanitary Lines", "Immediate Registration"],
     map_lat: 12.9121,
     map_lng: 77.6446,
-    seo_title: "60x40 Corner Site for Sale in HSR Layout Bangalore - BGM Real Estate",
+    seo_title: "60x40 Corner Site for Sale in HSR Layout Bangalore - HYVORA REAL ESTATES",
     seo_description: "BDA approved commercial corner plot 60x40 in HSR Layout Sector 2 Bangalore."
   },
   {
@@ -167,7 +167,7 @@ const initialSampleProperties = [
     amenities: ["Direct Highway Access", "Heavy Vehicle Turning Radius", "Fully Fenced Boundary", "Clear Legal Title"],
     map_lat: 15.3647,
     map_lng: 75.1240,
-    seo_title: "8.5 Acres Highway Land for Sale in Karnataka - BGM Real Estate",
+    seo_title: "8.5 Acres Highway Land for Sale in Karnataka - HYVORA REAL ESTATES",
     seo_description: "Prime 8.5 Acres NH 48 highway development land for sale with clear titles and direct road frontage."
   },
   {
@@ -207,7 +207,7 @@ const initialSampleProperties = [
     amenities: ["Glass Frontage", "3-Phase Power", "Dedicated Customer Parking", "Central Air Conditioning Ready"],
     map_lat: 15.3524,
     map_lng: 75.1387,
-    seo_title: "Commercial Showroom for Sale on MG Road - BGM Real Estate",
+    seo_title: "Commercial Showroom for Sale on MG Road - HYVORA REAL ESTATES",
     seo_description: "High street commercial retail showroom space for sale on MG Road."
   }
 ];
@@ -239,20 +239,20 @@ let memoryEnquiries = [
 ];
 
 let memorySettings = {
-  company_name: "BGM Real Estate",
-  contact_person: "Balaji",
+  company_name: "HYVORA REAL ESTATES",
+  contact_person: "HYVORA Specialist",
   logo_url: "/logo.png",
-  phone: "+91 98450 10604",
-  secondary_phone: "+91 88921 40055",
-  whatsapp: "+91 98450 10604",
-  email: "bgmrealestates@gmail.com",
-  address: "BGM REAL ESTATE, Office, Opp. to NR Colony Bus Stand, Above Dose Master, NR Colony, Basavanagudi, Bengaluru, Karnataka 560019",
-  google_maps_url: "https://maps.google.com/?q=NR+Colony+Bus+Stand+Bengaluru",
+  phone: "+91 8217512581",
+  secondary_phone: "+91 8217512581",
+  whatsapp: "+91 8217512581",
+  email: "hyvora.official@gmail.com",
+  address: "HYVORA REAL ESTATES, Bengaluru, Karnataka, India",
+  google_maps_url: "https://maps.google.com/?q=Bengaluru+Karnataka+India",
   business_hours: "Mon - Sat: 9:00 AM - 8:00 PM (Sunday by Appointment)",
   hero_headline: "Exceptional Real Estate. Extraordinary Opportunities.",
-  hero_subheading: "Discover premium entire buildings, commercial properties, prime sites, and development land curated by BGM Real Estate.",
+  hero_subheading: "Discover premium entire buildings, commercial properties, prime sites, and development land curated by HYVORA REAL ESTATES.",
   hero_image_url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
-  about_content: "BGM Real Estate is a premier corporate real estate consultancy and investment advisory firm led by Balaji. We specialize in the acquisition, disposition, and strategic marketing of entire commercial and residential buildings, prime layout plots, industrial acreage, and high-yield real estate assets across Karnataka.",
+  about_content: "HYVORA REAL ESTATES is a premier corporate real estate consultancy and investment advisory firm. We specialize in the acquisition, disposition, and strategic marketing of entire commercial and residential buildings, prime layout plots, industrial acreage, and high-yield real estate assets across Karnataka.",
   mission: "To deliver uncompromising transparency, rigorous legal title verification, and maximum financial return for real estate buyers, corporate investors, and property developers.",
   vision: "To be Karnataka's most trusted and preferred corporate real estate advisory and high-value asset brokerage partner."
 };
@@ -410,7 +410,7 @@ exports.createEnquiry = async (req, res) => {
     memoryEnquiries.unshift(newEnquiry);
 
     return res.status(201).json({
-      message: "Thank you! Your enquiry has been received. A BGM property specialist will contact you shortly.",
+      message: "Thank you! Your enquiry has been received. A HYVORA property specialist will contact you shortly.",
       enquiry: newEnquiry
     });
   } catch (error) {

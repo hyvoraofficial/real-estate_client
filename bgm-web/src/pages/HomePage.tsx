@@ -102,15 +102,16 @@ export const HomePage: React.FC = () => {
   return (
     <div className="space-y-24 pb-20">
       {/* 1. Grand Hero Section */}
-      <section className="relative min-h-[620px] lg:min-h-[720px] flex items-center justify-center bg-[#2E060D] text-white px-4 sm:px-6 lg:px-8 overflow-hidden pt-12 pb-28">
-        {/* Background High-res Architectural Image with Deep Burgundy Tint */}
+      <section className="relative min-h-[620px] lg:min-h-[720px] flex items-center justify-center bg-[#100305] text-white px-4 sm:px-6 lg:px-8 overflow-hidden pt-12 pb-28">
+        {/* Background High-res Architectural Image with increased clarity and transparent overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={settings.hero_image_url || 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80'}
-            alt="BGM Real Estate Hero"
-            className="w-full h-full object-cover opacity-25 scale-105 transform motion-safe:animate-pulse duration-[10000ms]"
+            alt="HYVORA REAL ESTATES Hero"
+            className="w-full h-full object-cover opacity-75 scale-105 transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2E060D] via-[#2E060D]/80 to-[#4A0E17]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#100305]/90 via-[#100305]/40 to-[#100305]/30" />
+          <div className="absolute inset-0 bg-black/25" />
         </div>
 
         {/* Decorative Luxury Lines */}
@@ -127,7 +128,7 @@ export const HomePage: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-base sm:text-xl text-ivory-100 font-normal leading-relaxed opacity-90">
-            {settings.hero_subheading || "Discover premium buildings, commercial properties, sites and land opportunities curated by BGM Real Estate."}
+            {settings.hero_subheading || "Discover premium buildings, commercial properties, sites and land opportunities curated by HYVORA REAL ESTATES."}
           </p>
 
           {/* Direct CTA Buttons */}
@@ -209,7 +210,7 @@ export const HomePage: React.FC = () => {
             What We Specialize In
           </h2>
           <p className="text-sm sm:text-base text-charcoal-600 leading-relaxed">
-            From standalone commercial headquarters to high-acreage development parcels, BGM Real Estate curates premier property assets with verified legal compliance.
+            From standalone commercial headquarters to high-acreage development parcels, HYVORA REAL ESTATES curates premier property assets with verified legal compliance.
           </p>
         </div>
 
@@ -297,10 +298,10 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto space-y-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-gold-400">
-              The BGM Standard
+              The HYVORA Standard
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-white">
-              Why Institutional & Private Investors Choose BGM
+              Why Institutional & Private Investors Choose HYVORA
             </h2>
             <p className="text-ivory-200 text-sm sm:text-base leading-relaxed opacity-90">
               We eliminate traditional real estate complexities with institutional-grade due diligence, clear title ownership, and personalized advisory.

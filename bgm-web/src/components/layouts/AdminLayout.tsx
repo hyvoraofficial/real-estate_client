@@ -35,19 +35,14 @@ export const AdminLayout: React.FC = () => {
         <div>
           {/* Logo */}
           <div className="h-24 px-6 border-b border-burgundy-900/30 flex items-center justify-between">
-            <Link to="/admin/dashboard" className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-xl bg-white p-1 flex items-center justify-center shadow-lg border border-gold-500/30">
-                <img src="/logo.png" alt="BGM Real Estate" className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <span className="font-serif font-black text-white text-base tracking-tight block">BGM</span>
-                <span className="text-[9px] tracking-widest uppercase font-bold text-gold-400 block -mt-0.5">
-                  REAL ESTATE
-                </span>
-                <span className="text-[9px] uppercase font-semibold text-rose-300/70 block">
-                  Admin Portal
-                </span>
-              </div>
+            <Link to="/admin/dashboard" className="block">
+              <span className="font-serif font-black text-white text-lg tracking-wider block">HYVORA</span>
+              <span className="text-[10px] tracking-widest uppercase font-bold text-gold-400 block">
+                REAL ESTATES
+              </span>
+              <span className="text-[9px] uppercase font-semibold text-rose-300/70 block mt-0.5">
+                Admin Portal
+              </span>
             </Link>
           </div>
 
@@ -97,8 +92,8 @@ export const AdminLayout: React.FC = () => {
           
           <div className="px-3 py-2.5 bg-burgundy-950/40 rounded-xl border border-burgundy-900/40 flex items-center justify-between">
             <div className="truncate mr-2">
-              <p className="text-xs font-semibold text-white truncate">{admin.name || 'BGM Administrator'}</p>
-              <p className="text-[10px] text-gold-400/80 truncate">{admin.email || 'admin@bgmrealestate.in'}</p>
+              <p className="text-xs font-semibold text-white truncate">{admin.name || 'HYVORA Administrator'}</p>
+              <p className="text-[10px] text-gold-400/80 truncate">{admin.email || 'admin@hyvora.in'}</p>
             </div>
             <button
               onClick={() => {
@@ -119,8 +114,7 @@ export const AdminLayout: React.FC = () => {
         {/* Top bar on mobile */}
         <div className="md:hidden h-16 bg-[#0a0506] border-b border-burgundy-900/30 px-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="BGM" className="w-8 h-8 object-contain" />
-            <span className="font-serif font-bold text-white text-sm">BGM Admin</span>
+            <span className="font-serif font-bold text-white text-sm tracking-wide">HYVORA Admin</span>
           </div>
           <div className="flex items-center space-x-3">
             <Link to="/" className="text-xs text-gold-400 font-medium">Public Site</Link>

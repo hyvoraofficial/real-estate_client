@@ -1,6 +1,6 @@
 -- ============================================================
--- 010_bgm_real_estate_schema.sql
--- BGM Real Estate High-Value Asset Management Schema
+-- 010_real_estate_schema.sql
+-- HYVORA REAL ESTATES High-Value Asset Management Schema
 -- ============================================================
 
 -- 1. Ensure properties table supports all high-value asset fields
@@ -48,16 +48,16 @@ CREATE TABLE IF NOT EXISTS enquiries (
 -- 3. Website CMS & Settings Table
 CREATE TABLE IF NOT EXISTS website_settings (
   id VARCHAR(50) PRIMARY KEY DEFAULT 'global_settings',
-  company_name VARCHAR(255) DEFAULT 'BGM Real Estate',
+  company_name VARCHAR(255) DEFAULT 'HYVORA REAL ESTATES',
   logo_url VARCHAR(500) DEFAULT '/logo.png',
-  phone VARCHAR(50) DEFAULT '+91 98765 43210',
-  whatsapp VARCHAR(50) DEFAULT '+91 98765 43210',
-  email VARCHAR(255) DEFAULT 'contact@bgmrealestate.com',
-  address TEXT DEFAULT 'BGM Real Estate Hub, Bangalore / Hubballi, Karnataka',
+  phone VARCHAR(50) DEFAULT '+91 8217512581',
+  whatsapp VARCHAR(50) DEFAULT '+91 8217512581',
+  email VARCHAR(255) DEFAULT 'hyvora.official@gmail.com',
+  address TEXT DEFAULT 'HYVORA REAL ESTATES, Bengaluru, Karnataka, India',
   google_maps_url TEXT,
-  business_hours VARCHAR(255) DEFAULT 'Mon - Sat: 9:00 AM - 7:00 PM',
+  business_hours VARCHAR(255) DEFAULT 'Mon - Sat: 9:00 AM - 8:00 PM',
   hero_headline VARCHAR(255) DEFAULT 'Exceptional Real Estate. Extraordinary Opportunities.',
-  hero_subheading TEXT DEFAULT 'Discover premium buildings, commercial properties, sites and land opportunities curated by BGM Real Estate.',
+  hero_subheading TEXT DEFAULT 'Discover premium buildings, commercial properties, sites and land opportunities curated by HYVORA REAL ESTATES.',
   hero_image_url VARCHAR(500),
   about_content TEXT,
   mission TEXT,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS website_settings (
 
 -- Insert default website settings if not present
 INSERT INTO website_settings (id, company_name, phone, email, address)
-VALUES ('global_settings', 'BGM Real Estate', '+91 98765 43210', 'contact@bgmrealestate.com', 'BGM Real Estate Corporate Office, Bangalore / Hubballi, Karnataka')
+VALUES ('global_settings', 'HYVORA REAL ESTATES', '+91 8217512581', 'hyvora.official@gmail.com', 'HYVORA REAL ESTATES, Bengaluru, Karnataka, India')
 ON CONFLICT (id) DO NOTHING;
 
 -- Indexes for performance

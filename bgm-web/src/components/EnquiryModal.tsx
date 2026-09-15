@@ -40,7 +40,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         email,
         property_id: propertyId,
         property_title: propertyTitle || 'General Corporate Advisory Enquiry',
-        message: message || 'I am interested in exploring property investment opportunities with BGM Real Estate.',
+        message: message || 'I am interested in exploring property investment opportunities with HYVORA REAL ESTATES.',
       });
       setSubmitted(true);
       toast.success('Your enquiry has been submitted successfully!');
@@ -76,7 +76,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 Direct Corporate Consultation
               </span>
               <h3 className="text-xl font-serif font-bold text-white mt-1">
-                {propertyTitle ? `Enquire on ${propertyTitle}` : 'Connect with BGM Real Estate'}
+                {propertyTitle ? `Enquire on ${propertyTitle}` : 'Connect with HYVORA REAL ESTATES'}
               </h3>
             </div>
             <button

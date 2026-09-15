@@ -12,7 +12,7 @@ const api = axios.create({
 
 // Attach JWT token for admin routes
 api.interceptors.request.use((config) => {
-  const adminToken = localStorage.getItem('bgm_admin_token');
+  const adminToken = localStorage.getItem('hyvora_admin_token');
   if (adminToken && config.url?.includes('/admin')) {
     config.headers.Authorization = `Bearer ${adminToken}`;
   }
@@ -22,7 +22,7 @@ api.interceptors.request.use((config) => {
 export default api;
 
 /* =======================================
-   PUBLIC BGM REAL ESTATE APIS
+   PUBLIC REAL ESTATE APIS
 ======================================= */
 
 // Fetch properties with filters & sorting
@@ -93,8 +93,9 @@ export const updateWebsiteSettings = async (data: Partial<WebsiteSettings>) => {
   return res.data;
 };
 
-export const uploadImage = async (file: File, folder: string = 'bgm_properties') => {
+export const uploadImage = async (file: File, folder: string = 'properties') => {
   const formData = new FormData();
+  formData.append('image', file);
   formData.append('file', file);
   formData.append('folder', folder);
   const res = await api.post('/upload/image', formData, {
@@ -102,3 +103,4 @@ export const uploadImage = async (file: File, folder: string = 'bgm_properties')
   });
   return res.data;
 };
+

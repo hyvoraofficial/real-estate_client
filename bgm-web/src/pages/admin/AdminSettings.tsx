@@ -35,7 +35,7 @@ export const AdminSettings: React.FC = () => {
 
     try {
       setUploadingHero(true);
-      const res = await uploadImage(file, 'bgm_branding');
+      const res = await uploadImage(file, 'branding');
       setFormData((prev) => ({ ...prev, hero_image_url: res.url }));
       toast.success("Hero image uploaded!");
     } catch (err) {
@@ -105,7 +105,7 @@ export const AdminSettings: React.FC = () => {
               <input
                 type="text"
                 value={formData.contact_person || ''}
-                placeholder="e.g. Balaji"
+                placeholder="e.g. HYVORA Specialist"
                 onChange={(e) => setFormData({ ...formData, contact_person: e.target.value })}
                 className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white"
               />
@@ -126,7 +126,7 @@ export const AdminSettings: React.FC = () => {
               <input
                 type="text"
                 value={formData.secondary_phone || ''}
-                placeholder="+91 88921 40055"
+                placeholder="+91 8217512581"
                 onChange={(e) => setFormData({ ...formData, secondary_phone: e.target.value })}
                 className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white font-mono"
               />

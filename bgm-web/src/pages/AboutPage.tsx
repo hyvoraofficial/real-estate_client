@@ -26,7 +26,7 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-serif font-extrabold text-white">
-            About <span className="text-gold-400">BGM Real Estate</span>
+            About <span className="text-gold-400">HYVORA REAL ESTATES</span>
           </h1>
 
           <p className="text-xs sm:text-base text-ivory-200 max-w-2xl mx-auto leading-relaxed opacity-90">
@@ -47,10 +47,10 @@ export const AboutPage: React.FC = () => {
             </h2>
             <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed">
               {settings.about_content ||
-                "BGM Real Estate is a premier corporate real estate consultancy and investment firm specializing in the sale and acquisition of entire commercial and residential buildings, prime layout plots, industrial land, and high-value property portfolios across Karnataka."}
+                "HYVORA REAL ESTATES is a premier corporate real estate consultancy and investment firm specializing in the sale and acquisition of entire commercial and residential buildings, prime layout plots, industrial land, and high-value property portfolios across Karnataka."}
             </p>
             <p className="text-xs sm:text-sm text-charcoal-700 leading-relaxed">
-              Unlike generic residential listing portals, BGM Real Estate focuses on substantial physical real estate assets where legal compliance, clear title provenance, cashflow verification, and institutional-grade negotiation are paramount.
+              Unlike generic residential listing portals, HYVORA REAL ESTATES focuses on substantial physical real estate assets where legal compliance, clear title provenance, cashflow verification, and institutional-grade negotiation are paramount.
             </p>
 
             <div className="pt-2 grid grid-cols-2 gap-4 text-xs font-bold text-charcoal-800">
@@ -76,7 +76,7 @@ export const AboutPage: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-ivory-300 bg-slate-900 h-96 lg:h-[460px]">
             <img
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
-              alt="BGM Corporate Real Estate"
+              alt="HYVORA Corporate Real Estate"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2E060D] via-transparent to-transparent opacity-80" />
@@ -134,7 +134,7 @@ export const AboutPage: React.FC = () => {
             to="/contact"
             className="px-7 py-3.5 bg-[#6B0F1A] hover:bg-[#800020] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all border border-gold-500/30 text-center"
           >
-            Contact BGM Real Estate
+            Contact HYVORA REAL ESTATES
           </Link>
         </div>
       </section>

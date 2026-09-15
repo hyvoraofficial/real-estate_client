@@ -234,7 +234,7 @@ export const PropertyDetailsPage: React.FC = () => {
                 <span>Call Now</span>
               </a>
               <a
-                href={`https://wa.me/${cleanWhatsApp}?text=Hello%20Balaji%20(BGM%20Real%20Estate),%20I%20am%20interested%20in%20discussing%20${encodeURIComponent(property.title)}`}
+                href={`https://wa.me/${cleanWhatsApp}?text=Hello%20HYVORA%20REAL%20ESTATES,%20I%20am%20interested%20in%20discussing%20${encodeURIComponent(property.title)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#25D366] text-white hover:bg-[#20ba5a] transition-colors flex items-center justify-center space-x-1.5 shadow-md"

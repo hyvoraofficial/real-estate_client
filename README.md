@@ -1,66 +1,57 @@
-# 🏢 HYVORA Property Management System (PMS)
+# 🏢 HYVORA REAL ESTATES
 
-[![Brand](https://img.shields.io/badge/HYVORA-Property%20Management-gold?style=flat-square)](https://hyvora.in)
-[![Demo](https://img.shields.io/badge/Demo-hyvorademo.in-blue?style=flat-square)](https://hyvorademo.in)
+[![Brand](https://img.shields.io/badge/HYVORA-Real%20Estates-burgundy?style=flat-square)](https://hyvora.in)
+[![Website](https://img.shields.io/badge/Website-hyvora.in-gold?style=flat-square)](https://hyvora.in)
 
-> **Build. Automate. Conquer.**  
-> Smart property management for modern real-estate businesses, developers, and property managers.
+> **Exceptional Real Estate. Extraordinary Opportunities.**  
+> Karnataka's premier corporate real estate consultancy and high-value asset brokerage partner.
 
 ---
 
 ## 🌟 Overview
 
-**HYVORA Property Management** is a modern, full-stack SaaS property management platform engineered for real estate developers, apartment societies, and residential/commercial property managers. It automates day-to-day operations including unit discovery, booking workflows, digital tenant onboarding, automated rent reminders, document storage, and centralized administrative controls.
+**HYVORA REAL ESTATES** is a premier real estate platform specializing in the acquisition, disposition, and strategic marketing of:
+- 🏢 **Entire Commercial & Residential Buildings** (Standalone G+3 to G+8 towers, rental yield assets)
+- 💼 **Commercial Properties & Plazas** (Grade-A showrooms, retail spaces, IT hubs)
+- 📐 **Prime Sites & Layout Plots** (BDA approved corner sites, double road commercial plots)
+- 🌳 **Development & Industrial Land** (National highway frontage, DC converted acreage)
 
-- **Primary Website:** [https://hyvora.in](https://hyvora.in)
-- **Live Interactive Demo:** [https://hyvorademo.in](https://hyvorademo.in)
-- **Support Contact:** `hyvora.official@gmail.com` | `+91 8217512581`
-
----
-
-## ✨ Core Features
-
-### 👨‍💼 Property Administrator Console (`/admin`)
-- 📊 **Executive Overview** - Live KPI monitoring (Total Properties, Total Units, Occupancy, Revenue, Active Tenants, Pending Maintenance)
-- 🏢 **Multi-Project Management** - Add, edit, and organize residential complexes, commercial plazas, and apartment buildings
-- 🏠 **Unit & Inventory Control** - Manage flat & shop inventories, floor plans, pricing, and availability states
-- 💰 **Dynamic Pricing Rules** - Custom pricing matrix based on unit type and occupancy headcount
-- 📋 **Booking Administration** - Review and approve tenant booking requests
-- 👥 **Tenant Management** - Centralized tenant profiles, contact directories, and lease contracts
-- 📄 **Digital Document Storage** - Store and verify digital lease agreements and identification files
-- 📈 **Revenue & Financial Insights** - Monthly collections, income per project, and rent reminder cron triggers
-
-### 👨‍💻 Resident & Tenant Portal (`/dashboard`)
-- 📋 **Booking Overview** - Live status tracking of property agreements
-- ⏰ **Smart Rent Reminders** - Automated alerts for upcoming dues
-- 📄 **Contract Access** - View uploaded agreements and identity verification documents
-- 💬 **Support Access** - One-click connection to property support operations
-
-### 🌐 Public Showcase & Discovery
-- 🔍 **Interactive Property Search** - Dynamic filtering by project, location, and unit category
-- 📍 **Interactive Location Picker** - OpenStreetMap integration with coordinates
-- 📱 **Mobile & Tablet Responsive** - Fluid responsive design tailored for mobile screens and desktop workstations
-- ⚡ **Optimized Web Performance** - High-speed WebP asset delivery, deferred font loading, and zero layout shift
+- **Official Website:** [https://hyvora.in](https://hyvora.in)
+- **Official Email:** `hyvora.official@gmail.com`
+- **Official Telephone:** `+91 8217512581`
+- **Head Office:** Bengaluru, Karnataka, India
 
 ---
 
-## 🚀 Quick Start & Evaluation
+## ✨ Key Platform Features
 
-### 1. Prerequisites
-- Node.js 18+ & npm
-- PostgreSQL / Supabase instance (optional for static UI exploration)
+### 🌐 Public Portal
+- 🔍 **Dynamic Property Search & Filtering** - Search by asset class, location, and price ranges
+- 🏢 **Detailed Spec Sheets** - Category-tailored parameters (FAR, ROI/Yield, road width, dimensions)
+- 📲 **Instant Advisory Enquiries** - Direct WhatsApp and phone consultation triggers with real estate advisors
+- 🗺️ **Interactive OpenStreetMap Locator** - Precise geolocation and property coordinates
+- 💎 **Luxury Aesthetic** - Bespoke burgundy and gold luxury palette with responsive mobile experience
 
-### 2. Running Locally
+### 👨‍💼 Property Administration Console (`/admin`)
+- 📊 **Executive Overview** - Real-time asset inventory, lead statistics, and categorized portfolio distribution
+- 🏠 **Full Property Lifecycle Management** - Add, edit, update, delete, and feature property assets
+- 🖼️ **Multi-Image Management** - High-resolution image uploads with dedicated cover selector
+- 📋 **Lead Management CRM** - Full tracking of client enquiries and status updates
+- ⚙️ **Website CMS Controls** - Real-time CMS updates for headlines, about story, company contact details, and phone numbers
 
-#### Frontend (Web App):
+---
+
+## 🚀 Quick Start
+
+### 1. Frontend:
 ```bash
-cd web
+cd bgm-web
 npm install
 npm run dev
 ```
 Access at `http://localhost:5173`.
 
-#### Backend (API):
+### 2. Backend (API):
 ```bash
 cd backend
 npm install
@@ -70,34 +61,15 @@ Access at `http://localhost:5000`.
 
 ---
 
-## 🔐 Safe Demo Accounts
+## 🔐 Admin Access
 
-To evaluate the software without third-party integrations:
-
-| Role | Access URL | Credentials |
+| Portal | URL | Demo Credentials |
 | :--- | :--- | :--- |
-| **Property Administrator** | `/login/admin` | One-Click Instant Admin Button or `admin@hyvora.in` / `demo123` |
-| **Tenant** | `/login` | One-Click Instant Tenant Button (Rahul Sharma) or `9876543210` / `123456` |
-
----
-
-## 🏗️ Architecture
-
-```
-hyvora.in (Main Brand Platform)
-   └── Portfolio & Product Demo Showcase
-         └── hyvorademo.in (HYVORA Property Management Demo)
-               ├── / (Public Property Listings & Showcase)
-               ├── /about (Platform Vision & Technology)
-               ├── /founder (Operations & Leadership Team)
-               ├── /login (Tenant Portal Access)
-               ├── /dashboard (Resident Dashboard)
-               └── /admin (Property Administrator Console)
-```
+| **HYVORA Admin Portal** | `/admin/login` | `admin@hyvora.in` / `demo123` |
 
 ---
 
 ## 📄 License & Ownership
 
-© 2026 HYVORA. All rights reserved.  
+© 2026 HYVORA REAL ESTATES. All Rights Reserved.  
 Powered by [HYVORA](https://hyvora.in).

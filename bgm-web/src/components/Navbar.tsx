@@ -101,23 +101,14 @@ export const Navbar: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="h-14 w-14 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm border border-ivory-200 group-hover:scale-105 transition-transform">
-                <img
-                  src={settings.logo_url || '/logo.png'}
-                  alt="BGM Real Estate"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-serif font-black tracking-tight text-[#6B0F1A] leading-none">
-                  BGM
-                </span>
-                <span className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#800020] mt-1">
-                  REAL ESTATE
-                </span>
-              </div>
+            {/* Brand Title */}
+            <Link to="/" className="flex flex-col group py-1">
+              <span className="text-2xl sm:text-3xl font-serif font-black tracking-tight text-[#6B0F1A] leading-none group-hover:text-[#800020] transition-colors">
+                HYVORA
+              </span>
+              <span className="text-[10px] sm:text-[11px] tracking-[0.28em] uppercase font-bold text-[#800020] mt-1">
+                REAL ESTATES
+              </span>
             </Link>
 
             {/* Desktop Navigation */}

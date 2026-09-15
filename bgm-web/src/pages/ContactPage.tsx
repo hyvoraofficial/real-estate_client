@@ -41,7 +41,7 @@ export const ContactPage: React.FC = () => {
         phone,
         email,
         property_title: `Advisory Consultation (${propertyType})`,
-        message: message || `Interested in discussing ${propertyType} purchase/sales opportunities with BGM Real Estate.`,
+        message: message || `Interested in discussing ${propertyType} purchase/sales opportunities with HYVORA REAL ESTATES.`,
       });
       setSubmitted(true);
       toast.success("Thank you! Your enquiry has been received.");
@@ -61,7 +61,7 @@ export const ContactPage: React.FC = () => {
             Corporate Consultation & Office Locations
           </span>
           <h1 className="text-3xl sm:text-5xl font-serif font-extrabold text-white">
-            Contact BGM Real Estate
+            Contact HYVORA REAL ESTATES
           </h1>
           <p className="text-xs sm:text-sm text-ivory-200 max-w-xl mx-auto leading-relaxed opacity-90">
             Reach out directly to our real estate advisory team for property valuations, site inspections, or investment acquisitions.
@@ -84,8 +84,8 @@ export const ContactPage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-gradient-to-r from-burgundy-900 via-[#800020] to-burgundy-950 text-white flex items-center justify-between border border-gold-500/30 shadow-md">
                   <div>
                     <span className="text-[10px] text-gold-300 font-bold uppercase tracking-widest block">Principal Advisor</span>
-                    <strong className="text-base font-serif font-black text-white">{settings.contact_person || 'Balaji'}</strong>
-                    <span className="text-[11px] text-ivory-200 block">BGM Real Estate</span>
+                    <strong className="text-base font-serif font-black text-white">{settings.contact_person || 'HYVORA Specialist'}</strong>
+                    <span className="text-[11px] text-ivory-200 block">HYVORA REAL ESTATES</span>
                   </div>
                   <div className="p-2 rounded-xl bg-white/10 border border-gold-400/30">
                     <ShieldCheck className="w-5 h-5 text-gold-400" />
@@ -147,13 +147,13 @@ export const ContactPage: React.FC = () => {
               {/* Instant WhatsApp Action */}
               <div className="pt-4 border-t border-ivory-200">
                 <a
-                  href={`https://wa.me/${cleanWhatsApp}?text=Hello%20Balaji%20(BGM%20Real%20Estate),%20I%20would%20like%20to%20enquire%20about%20property%20investments.`}
+                  href={`https://wa.me/${cleanWhatsApp}?text=Hello%20HYVORA%20REAL%20ESTATES,%20I%20would%20like%20to%20enquire%20about%20property%20investments.`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2.5 shadow-md transition-colors"
                 >
                   <WhatsAppIcon className="w-5 h-5 fill-white text-white" />
-                  <span>Start WhatsApp Consultation with Balaji</span>
+                  <span>Start WhatsApp Consultation with HYVORA</span>
                 </a>
               </div>
             </div>
@@ -170,7 +170,7 @@ export const ContactPage: React.FC = () => {
                   Schedule Private Property Walkthrough
                 </h3>
                 <p className="text-xs text-charcoal-500 mt-1">
-                  Fill out the form below and an authorized BGM representative will connect with you.
+                  Fill out the form below and an authorized HYVORA representative will connect with you.
                 </p>
               </div>
 

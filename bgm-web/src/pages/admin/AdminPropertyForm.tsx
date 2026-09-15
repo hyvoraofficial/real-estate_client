@@ -124,7 +124,7 @@ export const AdminPropertyForm: React.FC = () => {
 
     try {
       setUploadingImage(true);
-      const res = await uploadImage(file, 'bgm_properties');
+      const res = await uploadImage(file, 'properties');
       setImages((prev) => [...prev, res.url]);
       toast.success("Image uploaded!");
     } catch (err) {

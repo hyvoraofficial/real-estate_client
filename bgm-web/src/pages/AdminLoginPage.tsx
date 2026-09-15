@@ -28,7 +28,7 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   const fillDemo = () => {
-    setUsername('admin@bgmrealestate.in');
+    setUsername('admin@hyvora.in');
     setPassword('demo123');
   };
 
@@ -44,15 +44,15 @@ export const AdminLoginPage: React.FC = () => {
         </Link>
 
         <div className="text-center space-y-3">
-          <div className="w-20 h-20 rounded-2xl bg-white p-2.5 flex items-center justify-center mx-auto shadow-xl border-2 border-gold-500/40">
-            <img src="/logo.png" alt="BGM Real Estate" className="w-full h-full object-contain" />
-          </div>
           <div>
+            <span className="inline-block px-3 py-1 rounded-full bg-burgundy-900/60 border border-gold-500/40 text-[10px] font-bold text-gold-400 tracking-widest uppercase mb-3">
+              HYVORA REAL ESTATES
+            </span>
             <h2 className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
-              BGM Admin Gateway
+              HYVORA Admin Gateway
             </h2>
             <p className="text-xs text-ivory-200/80 mt-1">
-              Secure management portal for BGM properties, leads & CMS.
+              Secure management portal for HYVORA properties, leads & CMS.
             </p>
           </div>
         </div>
@@ -68,7 +68,7 @@ export const AdminLoginPage: React.FC = () => {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="admin@bgmrealestate.in"
+                placeholder="admin@hyvora.in"
                 required
                 className="w-full pl-11 pr-4 py-3 bg-white text-slate-900 font-semibold text-sm rounded-xl border-2 border-slate-300 focus:border-gold-500 focus:ring-4 focus:ring-gold-500/20 focus:outline-none placeholder-slate-400 shadow-sm transition-all"
               />

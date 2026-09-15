@@ -12,23 +12,14 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-14 h-14 rounded-2xl bg-white p-1 flex items-center justify-center shadow-lg border border-gold-500/30">
-                <img
-                  src={settings.logo_url || '/logo.png'}
-                  alt="BGM Real Estate"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div>
-                <span className="text-2xl font-serif font-black text-white tracking-tight leading-none block">
-                  BGM
-                </span>
-                <span className="text-[10px] tracking-[0.25em] font-bold uppercase text-gold-400">
-                  REAL ESTATE
-                </span>
-              </div>
-            </div>
+            <Link to="/" className="inline-block group">
+              <span className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight leading-none block group-hover:text-gold-300 transition-colors">
+                HYVORA
+              </span>
+              <span className="text-[10px] sm:text-[11px] tracking-[0.28em] font-bold uppercase text-gold-400 mt-1 block">
+                REAL ESTATES
+              </span>
+            </Link>
 
             <p className="text-xs text-white/70 max-w-sm leading-relaxed">
               Karnataka's trusted corporate real estate investment & sales consultancy. Specializing in entire commercial towers, high-yield residential blocks, prime corner sites, and extensive development land.
@@ -83,7 +74,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs text-white/80">
               <li>
                 <Link to="/about" className="hover:text-gold-400 transition-colors">
-                  About BGM Real Estate
+                  About HYVORA REAL ESTATES
                 </Link>
               </li>
               <li>
@@ -150,7 +141,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-[11px] text-white/60">
-          <p>© {new Date().getFullYear()} BGM Real Estate. All Rights Reserved.</p>
+          <p>© 2026 HYVORA REAL ESTATES. All Rights Reserved.</p>
           <p className="mt-2 md:mt-0 text-gold-400/80">
             Premium Corporate Real Estate & Asset Sales
           </p>
