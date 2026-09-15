@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #FAF9F6;
+    color: #1A1A1A;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .bg-warm-ivory {
+    background-color: #FAF9F6;
+  }
+
+  .text-burgundy {
+    color: #6B0F1A;
+  }
+
+  .bg-burgundy {
+    background-color: #6B0F1A;
+  }
+
+  .border-gold-accent {
+    border-color: #C5A059;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(235, 231, 223, 0.8);
+  }
+
+  .glass-dark {
+    background: rgba(46, 6, 13, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #A8823B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Leaflet maps */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 1rem;
+}
+
+/* Ensure browser autofill maintains dark crisp text */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 40px #ffffff inset !important;
+  -webkit-text-fill-color: #0f172a !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}

@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 const AUTHORIZED_ADMIN_EMAILS = [
   (process.env.ADMIN_EMAIL || "").toLowerCase(),
   "hyvora.official@gmail.com",
-  "admin@hyvora.in"
+  "admin@hyvora.in",
+  "admin@bgmrealestate.in",
+  "contact@bgmrealestate.com"
 ].filter(Boolean);
 
 // Admin login
@@ -14,13 +16,16 @@ exports.adminLogin = async (req, res) => {
   const normalizedUser = (username || "").trim().toLowerCase();
 
   // Support safe demo credentials for product evaluation
-  if ((normalizedUser === "admin@hyvora.in" || normalizedUser === "demo@hyvora.in") && (password === "demo123" || password === "admin123")) {
+  if (
+    (normalizedUser === "admin@hyvora.in" || normalizedUser === "demo@hyvora.in" || normalizedUser === "admin@bgmrealestate.in" || normalizedUser === "admin") &&
+    (password === "demo123" || password === "admin123" || password === "bgm123")
+  ) {
     const token = jwt.sign(
-      { id: "hyvora-admin-demo", role: "admin", email: normalizedUser, name: "HYVORA Admin" },
+      { id: "bgm-admin-demo", role: "admin", email: normalizedUser, name: "BGM Administrator" },
       process.env.JWT_SECRET || "hyvora-demo-secret-key-2026",
       { expiresIn: "7d" }
     );
-    return res.json({ message: "HYVORA Admin demo login success", token, user: { name: "HYVORA Admin", role: "admin", email: normalizedUser } });
+    return res.json({ message: "BGM Admin login success", token, user: { name: "BGM Administrator", role: "admin", email: normalizedUser } });
   }
 
   // Admin login check for authorized email

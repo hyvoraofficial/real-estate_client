@@ -46,6 +46,13 @@ app.use("/admin/data", adminDataRoutes);
 app.use("/admin/founders", founderRoutes);
 
 /* =========================
+   BGM REAL ESTATE API ROUTES
+========================================= */
+const bgmRoutes = require("./routes/bgmRoutes");
+app.use("/api", bgmRoutes);
+app.use("/api/bgm", bgmRoutes);
+
+/* =========================
    TENANT / BUSINESS ROUTES
 ========================= */
 const uploadRoutes = require("./routes/uploadRoutes");

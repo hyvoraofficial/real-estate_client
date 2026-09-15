@@ -1,8 +1,19 @@
+# Dependencies & Build
 node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# Environment & Secret Files
 .env
 .env.*
 !.env.example
-dist/
-build/
-.DS_Store
+
+# Logs and OS
 *.log
+.DS_Store
+.vscode/
+.idea/
+
+# Excluded Frontends
+web/
